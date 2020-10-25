@@ -31,7 +31,7 @@ class CustomAppBar extends StatelessWidget {
           SizedBox(width: 5),
           Text(
             "Etar".toUpperCase(),
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,),
           ),
           Spacer(),
           MenuItem(
@@ -43,15 +43,15 @@ class CustomAppBar extends StatelessWidget {
             press: () {},
           ),
           MenuItem(
-            title: "Időszakos Vizsgálatok",
+            title: "Vizsgálatok",
             press: () {},
           ),
           MenuItem(
-            title: "Karbantartások",
+            title: "Karbantartás",
             press: () {},
           ),
           MenuItem(
-            title: "Javítások",
+            title: "Javítás",
             press: () {},
           ),
           DefaultButton(

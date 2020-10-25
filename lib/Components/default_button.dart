@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../constant.dart';
 
 class DefaultButton extends StatelessWidget {
   final String text;
@@ -17,10 +16,11 @@ class DefaultButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(25),
       child: FlatButton(
         padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-        color: kPrimaryColor,
+        color: Color(0xFF9B0000),
         onPressed: press,
         child: Text(
           text.toUpperCase(),
+          style: TextStyle(color: Color(0xFFFFFF00)),
         ),
       ),
     );

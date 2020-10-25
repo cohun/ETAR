@@ -8,7 +8,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.fromLTRB(150, 0, 80, 0),
+      padding: const EdgeInsets.fromLTRB(150, 0, 60, 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -27,7 +27,7 @@ class Body extends StatelessWidget {
                 "\naz Emelőgép Biztonsági Szabályzat előírásai szerint.",
                 style: TextStyle(
                   fontSize: 21,
-                  color: kTextcolor.withOpacity(0.34),
+                  color: kTextColor.withOpacity(0.34),
                 ),
               ),
               SizedBox(
@@ -49,7 +49,7 @@ class Body extends StatelessWidget {
                         height: 38,
                         width: 38,
                         decoration: BoxDecoration(
-                          color: kPrimaryColor,
+                          color: Color(0xFF9B0000),
                           shape: BoxShape.circle,
                         ),
                         child: Container(
@@ -63,7 +63,7 @@ class Body extends StatelessWidget {
                       Text(
                         "ETAR app".toUpperCase(),
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Color(0xFFFFFF00),
                           fontWeight: FontWeight.bold,
                           fontSize: 19,
                         ),
