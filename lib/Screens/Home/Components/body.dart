@@ -15,7 +15,7 @@ class Body extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              width: size.width * 0.25,
+              width: size.width * 0.2,
               child: Image.asset("assets/images/Etar.png"),
             ),
             SizedBox(
@@ -81,7 +81,7 @@ class Body extends StatelessWidget {
             children: [
               Container(
                 child: Image.asset("assets/images/opStart.png"),
-                width: size.width * 0.1,
+                width: size.width * 0.08,
               ),
               Container(
                 child: Align(
@@ -89,13 +89,14 @@ class Body extends StatelessWidget {
                   child: Text(
                     "Üzembehelyezés",
                     style: TextStyle(
+                        fontSize: 11,
                         color: Color(0xFF372930),
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 color: kPrimaryColor,
-                width: size.width * 0.1,
+                width: size.width * 0.08,
                 height: 40,
               ),
             ],
@@ -107,7 +108,7 @@ class Body extends StatelessWidget {
             children: [
               Container(
                 child: Image.asset("assets/images/inspection.jpg"),
-                width: size.width * 0.1,
+                width: size.width * 0.08,
               ),
               Container(
                 child: Align(
@@ -115,13 +116,14 @@ class Body extends StatelessWidget {
                   child: Text(
                     "Vizsgálatok",
                     style: TextStyle(
+                        fontSize: 11,
                         color: Color(0xFF372930),
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 color: kPrimaryColor,
-                width: size.width * 0.1,
+                width: size.width * 0.08,
                 height: 40,
               ),
             ],
@@ -133,7 +135,7 @@ class Body extends StatelessWidget {
             children: [
               Container(
                 child: Image.asset("assets/images/maintenance.jpg"),
-                width: size.width * 0.084,
+                width: size.width * 0.07,
               ),
               Container(
                 child: Align(
@@ -141,13 +143,14 @@ class Body extends StatelessWidget {
                   child: Text(
                     "Karbantartás",
                     style: TextStyle(
+                        fontSize: 11,
                         color: Color(0xFF372930),
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 color: kPrimaryColor,
-                width: size.width * 0.1,
+                width: size.width * 0.08,
                 height: 40,
               ),
             ],
@@ -158,8 +161,8 @@ class Body extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                child: Image.asset("assets/images/service.jpg"),
-                width: size.width * 0.084,
+                child: Image.asset("assets/images/serviceMan.jpg"),
+                width: size.width * 0.07,
               ),
               Container(
                 child: Align(
@@ -167,13 +170,14 @@ class Body extends StatelessWidget {
                   child: Text(
                     "Javítás",
                     style: TextStyle(
+                        fontSize: 11,
                         color: Color(0xFF372930),
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 color: kPrimaryColor,
-                width: size.width * 0.1,
+                width: size.width * 0.08,
                 height: 40,
               ),
             ],
