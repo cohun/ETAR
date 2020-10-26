@@ -48,12 +48,12 @@ class Body extends StatelessWidget {
                       height: 38,
                       width: 38,
                       decoration: BoxDecoration(
-                        color: Color(0xFF9B0000),
+                        color: crimson,
                         shape: BoxShape.circle,
                       ),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Color(0xFF372930),
+                          color: kDarkButton,
                           shape: BoxShape.circle,
                         ),
                       ),
@@ -62,7 +62,7 @@ class Body extends StatelessWidget {
                     Text(
                       "ETAR app".toUpperCase(),
                       style: TextStyle(
-                        color: Color(0xFFFFFF00),
+                        color: yellow,
                         fontWeight: FontWeight.bold,
                         fontSize: 19,
                       ),
@@ -81,7 +81,7 @@ class Body extends StatelessWidget {
             children: [
               Container(
                 child: Image.asset("assets/images/opStart.png"),
-                width: size.width * 0.1,
+                width: size.width * 0.09,
               ),
               Container(
                 child: Align(
@@ -89,13 +89,14 @@ class Body extends StatelessWidget {
                   child: Text(
                     "Üzembehelyezés",
                     style: TextStyle(
-                        color: Color(0xFF372930),
+                        fontSize: 11,
+                        color: kDarkButton,
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 color: kPrimaryColor,
-                width: size.width * 0.1,
+                width: size.width * 0.09,
                 height: 40,
               ),
             ],
@@ -107,7 +108,7 @@ class Body extends StatelessWidget {
             children: [
               Container(
                 child: Image.asset("assets/images/inspection.jpg"),
-                width: size.width * 0.1,
+                width: size.width * 0.09,
               ),
               Container(
                 child: Align(
@@ -115,13 +116,14 @@ class Body extends StatelessWidget {
                   child: Text(
                     "Vizsgálatok",
                     style: TextStyle(
-                        color: Color(0xFF372930),
+                        fontSize: 11,
+                        color: kDarkButton,
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 color: kPrimaryColor,
-                width: size.width * 0.1,
+                width: size.width * 0.09,
                 height: 40,
               ),
             ],
@@ -133,7 +135,7 @@ class Body extends StatelessWidget {
             children: [
               Container(
                 child: Image.asset("assets/images/maintenance.jpg"),
-                width: size.width * 0.084,
+                width: size.width * 0.076,
               ),
               Container(
                 child: Align(
@@ -141,13 +143,14 @@ class Body extends StatelessWidget {
                   child: Text(
                     "Karbantartás",
                     style: TextStyle(
-                        color: Color(0xFF372930),
+                        fontSize: 11,
+                        color: kDarkButton,
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 color: kPrimaryColor,
-                width: size.width * 0.1,
+                width: size.width * 0.086,
                 height: 40,
               ),
             ],
@@ -159,7 +162,7 @@ class Body extends StatelessWidget {
             children: [
               Container(
                 child: Image.asset("assets/images/service.jpg"),
-                width: size.width * 0.084,
+                width: size.width * 0.076,
               ),
               Container(
                 child: Align(
@@ -167,13 +170,14 @@ class Body extends StatelessWidget {
                   child: Text(
                     "Javítás",
                     style: TextStyle(
-                        color: Color(0xFF372930),
+                        fontSize: 11,
+                        color: kDarkButton,
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 color: kPrimaryColor,
-                width: size.width * 0.1,
+                width: size.width * 0.086,
                 height: 40,
               ),
             ],
