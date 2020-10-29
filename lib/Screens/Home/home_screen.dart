@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                       width: size.width,
                       alignment: Alignment.bottomRight,
                       child: Container(
-                        constraints: BoxConstraints(maxWidth: 1200),
+                        constraints: BoxConstraints(maxWidth: 1000, minWidth: 800),
                         width: size.width*0.62,
                           child: Image.asset("assets/images/mainImage.png"),
                       ),
