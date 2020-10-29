@@ -8,7 +8,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Column(
@@ -74,115 +74,131 @@ class Body extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(width: size.width*0.08,),
-        Card(
-          elevation: 12,
-          child: Column(
-            children: [
-              Container(
-                child: Image.asset("assets/images/opStart.png"),
-                width: size.width * 0.08,
-              ),
-              Container(
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Üzembehelyezés",
-                    style: TextStyle(
-                        fontSize: 11,
-                        color: Color(0xFF372930),
-                        fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
+        SizedBox(width: size.width*0.15,),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Card(
+                  elevation: 12,
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Image.asset("assets/images/opStart.png"),
+                        width: size.width * 0.08,
+                      ),
+                      Container(
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Üzembehelyezés",
+                            style: TextStyle(
+                                fontSize: 11,
+                                color: Color(0xFF372930),
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        color: kPrimaryColor,
+                        width: size.width * 0.08,
+                        height: 40,
+                      ),
+                    ],
                   ),
                 ),
-                color: kPrimaryColor,
-                width: size.width * 0.08,
-                height: 40,
-              ),
-            ],
-          ),
+                Card(
+                  elevation: 12,
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Image.asset("assets/images/inspection.jpg"),
+                        width: size.width * 0.08,
+                      ),
+                      Container(
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Vizsgálatok",
+                            style: TextStyle(
+                                fontSize: 11,
+                                color: Color(0xFF372930),
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        color: kPrimaryColor,
+                        width: size.width * 0.08,
+                        height: 40,
+                      ),
+                    ],
+                  ),
+                ),
+                Card(
+                  elevation: 12,
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Image.asset("assets/images/maintenance.jpg"),
+                        width: size.width * 0.07,
+                      ),
+                      Container(
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Karbantartás",
+                            style: TextStyle(
+                                fontSize: 11,
+                                color: Color(0xFF372930),
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        color: kPrimaryColor,
+                        width: size.width * 0.08,
+                        height: 40,
+                      ),
+                    ],
+                  ),
+                ),
+                Card(
+                  elevation: 12,
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Image.asset("assets/images/serviceMan.jpg"),
+                        width: size.width * 0.07,
+                      ),
+                      Container(
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Javítás",
+                            style: TextStyle(
+                                fontSize: 11,
+                                color: Color(0xFF372930),
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        color: kPrimaryColor,
+                        width: size.width * 0.08,
+                        height: 40,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 150,),
+            Container(
+              width: size.width * 0.5,
+              child: Image.asset("assets/images/mainImage.png"),
+            ),
+          ],
         ),
-        Card(
-          elevation: 12,
-          child: Column(
-            children: [
-              Container(
-                child: Image.asset("assets/images/inspection.jpg"),
-                width: size.width * 0.08,
-              ),
-              Container(
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Vizsgálatok",
-                    style: TextStyle(
-                        fontSize: 11,
-                        color: Color(0xFF372930),
-                        fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                color: kPrimaryColor,
-                width: size.width * 0.08,
-                height: 40,
-              ),
-            ],
-          ),
-        ),
-        Card(
-          elevation: 12,
-          child: Column(
-            children: [
-              Container(
-                child: Image.asset("assets/images/maintenance.jpg"),
-                width: size.width * 0.07,
-              ),
-              Container(
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Karbantartás",
-                    style: TextStyle(
-                        fontSize: 11,
-                        color: Color(0xFF372930),
-                        fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                color: kPrimaryColor,
-                width: size.width * 0.08,
-                height: 40,
-              ),
-            ],
-          ),
-        ),
-        Card(
-          elevation: 12,
-          child: Column(
-            children: [
-              Container(
-                child: Image.asset("assets/images/serviceMan.jpg"),
-                width: size.width * 0.07,
-              ),
-              Container(
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Javítás",
-                    style: TextStyle(
-                        fontSize: 11,
-                        color: Color(0xFF372930),
-                        fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                color: kPrimaryColor,
-                width: size.width * 0.08,
-                height: 40,
-              ),
-            ],
-          ),
-        )
+
       ],
     );
   }
