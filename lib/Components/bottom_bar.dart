@@ -11,53 +11,15 @@ class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(30),
+      padding: EdgeInsets.all(18),
       color: Colors.blueGrey[900],
       child: Column(
         children: [
           Row(
             mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              BottomBarColumn(
-                heading: 'Kapcsolat',
-                s1: 'WEB',
-                s2: 'H-ITB',
-                s3: '',
-              ),
-              BottomBarColumn(
-                heading: 'Segédletek',
-                s1: 'Működési leírások',
-                s2: 'Oktató anyagok',
-                s3: 'GYIK',
-              ),
-              BottomBarColumn(
-                heading: 'Videók',
-                s1: 'YouTube',
-                s2: '',
-                s3: '',
-              ),
-              Container(
-                color: Colors.blueGrey,
-                width: 2,
-                height: 150,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  InfoText(
-                    type: 'Email',
-                    text: 'etar@h-itb.hu',
-                  ),
-                  SizedBox(height: 5),
-                  InfoText(
-                    type: 'Cím',
-                    text: 'H-ITB Kft. 1119 Budapest Kelenvölgyi htsr. 5',
-                  )
-                ],
-              ),
-            ],
-          ),
+
           Divider(
             color: Colors.blueGrey,
           ),
@@ -71,6 +33,7 @@ class BottomBar extends StatelessWidget {
           ),
         ],
       ),
+    ]),
     );
   }
 }
