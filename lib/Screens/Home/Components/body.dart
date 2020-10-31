@@ -1,4 +1,5 @@
 import 'package:etar_app/Screens/Home/Components/body_mobile.dart';
+import 'package:etar_app/Screens/Home/Components/body_tablet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -10,7 +11,9 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return ScreenTypeLayout(
+      breakpoints: ScreenBreakpoints(desktop: 900, tablet: 680, watch: 200),
       mobile: BodyMobile(),
+      tablet: BodyTablet(),
       desktop: Container(
         width: size.width,
         height: size.height*0.7,
@@ -93,7 +96,7 @@ class Body extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: size.width*0.55,
+                  width: size.width*0.57,
                   alignment: Alignment.topRight,
                   constraints: BoxConstraints(maxWidth: 700),
                   child: Row(

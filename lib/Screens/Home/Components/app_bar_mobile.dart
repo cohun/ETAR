@@ -1,4 +1,5 @@
 import 'package:etar_app/Components/default_button.dart';
+import 'package:etar_app/Screens/Home/Components/navigation_drawer/navigation_drawer.dart';
 import 'package:flutter/material.dart';
 
 class NavigationBarMobile extends StatelessWidget {
@@ -19,11 +20,14 @@ class NavigationBarMobile extends StatelessWidget {
           Spacer(),
           DefaultButton(
             text: "ETAR app",
-            press: () {},
+            press: () {return NavigationDrawer();},
           ),
           SizedBox(width: 20,),
         ],
       ),
     );
   }
+
+
+
 }

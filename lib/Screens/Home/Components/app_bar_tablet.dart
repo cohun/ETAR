@@ -1,21 +1,14 @@
 import 'package:etar_app/Components/default_button.dart';
-import 'package:etar_app/Screens/Home/Components/app_bar_mobile.dart';
-import 'package:etar_app/Screens/Home/Components/app_bar_tablet.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 import 'menu_item.dart';
 
-class CustomAppBar extends StatelessWidget {
+class NavigationBarTablet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      breakpoints: ScreenBreakpoints(desktop: 900, tablet: 680, watch: 200),
-      mobile: NavigationBarMobile(),
-      tablet: NavigationBarTablet(),
-      desktop: Container(
-        margin: EdgeInsets.all(20),
-        padding: EdgeInsets.all(20),
+    return Container(
+        margin: EdgeInsets.symmetric(vertical: 20, horizontal: 12),
+        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 12),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(46),
@@ -37,27 +30,28 @@ class CustomAppBar extends StatelessWidget {
             SizedBox(width: 5),
             Text(
               "Etar".toUpperCase(),
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,),
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,),
             ),
             Spacer(),
-            MenuItem(
-              title: "Főoldal",
-              press: () {},
-            ),
+           
             MenuItem(
               title: "Üzembehelyezés",
+              fontSize: 11,
               press: () {},
             ),
             MenuItem(
               title: "Vizsgálatok",
+              fontSize: 11,
               press: () {},
             ),
             MenuItem(
               title: "Karbantartás",
+              fontSize: 11,
               press: () {},
             ),
             MenuItem(
               title: "Javítás",
+              fontSize: 11,
               press: () {},
             ),
             DefaultButton(
@@ -66,7 +60,6 @@ class CustomAppBar extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }

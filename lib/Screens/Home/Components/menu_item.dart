@@ -5,10 +5,11 @@ import '../../../constant.dart';
 class MenuItem extends StatelessWidget {
   final String title;
   final Function press;
+  final double fontSize;
   const MenuItem({
     Key key,
     this.title,
-    this.press,
+    this.press, this.fontSize,
   }) : super(key: key);
 
   @override
@@ -22,6 +23,7 @@ class MenuItem extends StatelessWidget {
           style: TextStyle(
             color: kTextColor.withOpacity(0.3),
             fontWeight: FontWeight.bold,
+            fontSize: fontSize,
           ),
         ),
       ),
