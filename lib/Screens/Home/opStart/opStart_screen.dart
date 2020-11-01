@@ -20,7 +20,7 @@ class OpStartScreen extends StatelessWidget {
             CustomAppBar(),
 
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(50.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
