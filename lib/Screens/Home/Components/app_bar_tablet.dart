@@ -1,6 +1,8 @@
 import 'package:etar_app/Components/default_button.dart';
+import 'package:etar_app/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 
+import '../../../locator.dart';
 import 'menu_item.dart';
 
 class NavigationBarTablet extends StatelessWidget {
@@ -28,35 +30,48 @@ class NavigationBarTablet extends StatelessWidget {
               alignment: Alignment.topCenter,
             ),
             SizedBox(width: 5),
-            Text(
-              "Etar".toUpperCase(),
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,),
+            InkWell(
+              child: Text(
+                "Etar".toUpperCase(),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,),
+              ),
+              onTap: () {return locator<NavigationService>().navigateTo('home');},
             ),
             Spacer(),
            
             MenuItem(
               title: "Üzembehelyezés",
               fontSize: 11,
-              press: () {},
+              press: () {
+                return locator<NavigationService>().navigateTo('opStart');
+              },
             ),
             MenuItem(
               title: "Vizsgálatok",
               fontSize: 11,
-              press: () {},
+              press: () {
+                return locator<NavigationService>().navigateTo('inspection');
+              },
             ),
             MenuItem(
               title: "Karbantartás",
               fontSize: 11,
-              press: () {},
+              press: () {
+                return locator<NavigationService>().navigateTo('maintenance');
+              },
             ),
             MenuItem(
               title: "Javítás",
               fontSize: 11,
-              press: () {},
+              press: () {
+                return locator<NavigationService>().navigateTo('repair');
+              },
             ),
             DefaultButton(
               text: "ETAR app",
-              press: () {},
+              press: () {
+                return locator<NavigationService>().navigateTo('repair');
+              },
             ),
           ],
         ),

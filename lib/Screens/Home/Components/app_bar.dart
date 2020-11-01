@@ -1,9 +1,11 @@
 import 'package:etar_app/Components/default_button.dart';
 import 'package:etar_app/Screens/Home/Components/app_bar_mobile.dart';
 import 'package:etar_app/Screens/Home/Components/app_bar_tablet.dart';
+import 'package:etar_app/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
+import '../../../locator.dart';
 import 'menu_item.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -35,34 +37,51 @@ class CustomAppBar extends StatelessWidget {
               alignment: Alignment.topCenter,
             ),
             SizedBox(width: 5),
-            Text(
-              "Etar".toUpperCase(),
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,),
+            InkWell(
+              child: Text(
+                "Etar".toUpperCase(),
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,),
+              ),
+              onTap: () {
+                return locator<NavigationService>().navigateTo('home');
+              },
             ),
             Spacer(),
             MenuItem(
               title: "Főoldal",
-              press: () {},
+              press: () {
+                return locator<NavigationService>().navigateTo('home');
+              },
             ),
             MenuItem(
               title: "Üzembehelyezés",
-              press: () {},
+              press: () {
+                return locator<NavigationService>().navigateTo('opStart');
+              },
             ),
             MenuItem(
               title: "Vizsgálatok",
-              press: () {},
+              press: () {
+                return locator<NavigationService>().navigateTo('inspection');
+              },
             ),
             MenuItem(
               title: "Karbantartás",
-              press: () {},
+              press: () {
+                return locator<NavigationService>().navigateTo('maintenance');
+              },
             ),
             MenuItem(
               title: "Javítás",
-              press: () {},
+              press: () {
+                return locator<NavigationService>().navigateTo('repair');
+              },
             ),
             DefaultButton(
               text: "ETAR app",
-              press: () {},
+              press: () {
+                return locator<NavigationService>().navigateTo('etarApp');
+              },
             ),
           ],
         ),
