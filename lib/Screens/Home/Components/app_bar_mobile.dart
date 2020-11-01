@@ -13,9 +13,15 @@ class NavigationBarMobile extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           SizedBox(width: 20,),
-          IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () {},
+
+          InkWell(
+            onTap: (){
+              Scaffold.of(context).openDrawer();
+            },
+            child: Icon(
+              Icons.menu,
+              size: 28,
+            ),
           ),
           Spacer(),
           DefaultButton(

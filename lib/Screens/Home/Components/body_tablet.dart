@@ -133,7 +133,7 @@ class BodyTablet extends StatelessWidget {
                         child: Column(
                           children: [
                             Container(
-                              constraints: BoxConstraints(maxHeight: 115),
+                              constraints: BoxConstraints(maxHeight: 110),
                               child: Image.asset("assets/images/inspection.jpg",),
                             ),
                             Container(
@@ -150,7 +150,7 @@ class BodyTablet extends StatelessWidget {
                               ),
                               color: kPrimaryColor,
                               width: 120,
-                              height: 30,
+                              height: 30.46,
                             ),
                           ],
                         ),

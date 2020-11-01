@@ -18,7 +18,7 @@ class NavigationDrawerHeader extends StatelessWidget {
           ),
           SizedBox(height: 12,),
           Text(
-            'Indít',
+            'App',
             style: TextStyle(color: yellow),
           ),
         ],
