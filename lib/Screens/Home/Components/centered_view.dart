@@ -11,7 +11,7 @@ class HomeView extends StatelessWidget {
     return Container(
       alignment: Alignment.topCenter,
       child: ConstrainedBox(
-        constraints: BoxConstraints(maxWidth: 1600),
+        constraints: BoxConstraints(maxWidth: 2100),
         child: child,
       ),
     );
