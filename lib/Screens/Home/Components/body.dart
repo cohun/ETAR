@@ -138,96 +138,105 @@ class Body extends StatelessWidget {
                         onTap: () {return locator<NavigationService>().navigateTo('opStart');},
                       ),
                       //******************************************************
-                      Card(
-                        elevation: 16,
-                        child: Container(
-                          constraints: BoxConstraints(maxHeight: 140, maxWidth: 120),
-                          child: Column(
-                            children: [
-                              Container(
-                                constraints: BoxConstraints(maxHeight: 100),
-                                  child: Image.asset("assets/images/inspection.jpg",),
-                              ),
-                              Container(
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    "Vizsgálatok",
-                                    style: TextStyle(
-                                        fontSize: 11,
-                                        color: Color(0xFF372930),
-                                        fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center,
-                                  ),
+                      InkWell(
+                        child: Card(
+                          elevation: 16,
+                          child: Container(
+                            constraints: BoxConstraints(maxHeight: 140, maxWidth: 120),
+                            child: Column(
+                              children: [
+                                Container(
+                                  constraints: BoxConstraints(maxHeight: 100),
+                                    child: Image.asset("assets/images/inspection.jpg",),
                                 ),
-                                color: kPrimaryColor,
-                                width: 160,
-                                height: 40,
-                              ),
-                            ],
+                                Container(
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      "Vizsgálatok",
+                                      style: TextStyle(
+                                          fontSize: 11,
+                                          color: Color(0xFF372930),
+                                          fontWeight: FontWeight.bold),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  color: kPrimaryColor,
+                                  width: 160,
+                                  height: 40,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
+                        onTap: () {return locator<NavigationService>().navigateTo('inspection');},
                       ),
                       //*******************************************************
-                      Card(
-                        elevation: 12,
-                        child: Container(
-                          constraints: BoxConstraints(maxHeight: 140, maxWidth: 120),
-                          child: Column(
-                            children: [
-                              Container(
-                                constraints: BoxConstraints(maxHeight: 100),
-                                  child: Image.asset("assets/images/maintenance.jpg",),
-                              ),
-                              Container(
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    "Karbantartás",
-                                    style: TextStyle(
-                                        fontSize: 11,
-                                        color: Color(0xFF372930),
-                                        fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center,
-                                  ),
+                      InkWell(
+                        child: Card(
+                          elevation: 12,
+                          child: Container(
+                            constraints: BoxConstraints(maxHeight: 140, maxWidth: 120),
+                            child: Column(
+                              children: [
+                                Container(
+                                  constraints: BoxConstraints(maxHeight: 100),
+                                    child: Image.asset("assets/images/maintenance.jpg",),
                                 ),
-                                color: kPrimaryColor,
-                                height: 40,
-                                width: 160,
-                              ),
-                            ],
+                                Container(
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      "Karbantartás",
+                                      style: TextStyle(
+                                          fontSize: 11,
+                                          color: Color(0xFF372930),
+                                          fontWeight: FontWeight.bold),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  color: kPrimaryColor,
+                                  height: 40,
+                                  width: 160,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
+                        onTap: () {return locator<NavigationService>().navigateTo('maintenance');},
                       ),
-                      Card(
-                        elevation: 12,
-                        child: Container(
-                          constraints: BoxConstraints(maxHeight: 140, maxWidth: 120),
-                          child: Column(
-                            children: [
-                              Container(
-                                child: Image.asset("assets/images/serviceMan.jpg"),
-                                constraints: BoxConstraints(maxHeight: 100),
-                              ),
-                              Container(
-                                child: Align(
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    "Javítás",
-                                    style: TextStyle(
-                                        fontSize: 11,
-                                        color: Color(0xFF372930),
-                                        fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center,
-                                  ),
+                      InkWell(
+                        child: Card(
+                          elevation: 12,
+                          child: Container(
+                            constraints: BoxConstraints(maxHeight: 140, maxWidth: 120),
+                            child: Column(
+                              children: [
+                                Container(
+                                  child: Image.asset("assets/images/serviceMan.jpg"),
+                                  constraints: BoxConstraints(maxHeight: 100),
                                 ),
-                                color: kPrimaryColor,
-                                width: 160,
-                                height: 40,
-                              ),
-                            ],
+                                Container(
+                                  child: Align(
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      "Javítás",
+                                      style: TextStyle(
+                                          fontSize: 11,
+                                          color: Color(0xFF372930),
+                                          fontWeight: FontWeight.bold),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  color: kPrimaryColor,
+                                  width: 160,
+                                  height: 40,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
+                        onTap: () {return locator<NavigationService>().navigateTo('repair');},
                       ),
                     ],
                   ),

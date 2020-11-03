@@ -1,10 +1,10 @@
 
 import 'package:etar_app/Screens/Home/etarApp/etarApp.dart';
 import 'package:etar_app/Screens/Home/home_screen.dart';
-import 'package:etar_app/Screens/Home/inspection/inspection.dart';
-import 'package:etar_app/Screens/Home/maintenance/maintenance.dart';
+import 'package:etar_app/Screens/Home/inspection/inspection_screen.dart';
+import 'package:etar_app/Screens/Home/maintenance/maintenance_screen.dart';
 import 'package:etar_app/Screens/Home/opStart/opStart_screen.dart';
-import 'package:etar_app/Screens/Home/repair/repair.dart';
+import 'package:etar_app/Screens/Home/repair/repair_screen.dart';
 import 'package:etar_app/routing/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

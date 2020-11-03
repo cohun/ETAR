@@ -1,7 +1,6 @@
-import 'package:etar_app/Screens/Home/Components/body_opStart_mobile.dart';
+
 import 'package:etar_app/constant.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 class OpStartMobile extends StatelessWidget {
   const OpStartMobile({Key key, this.what, this.imageName, this.text1, this.text2, this.text3}) : super(key: key);
@@ -31,17 +30,26 @@ class OpStartMobile extends StatelessWidget {
                       elevation: 12,
                       child: Container(
                         constraints:
-                        BoxConstraints(maxHeight: 70, maxWidth: 56),
+                        BoxConstraints(maxHeight: 70, maxWidth: 60),
                         child: Column(
                           children: [
                             Container(
-                              constraints: BoxConstraints(maxHeight: 50),
+                              constraints: BoxConstraints(maxHeight: 46),
                               child: Image.asset("assets/images/$imageName"),
                             ),
                             Container(
                               child: Align(
                                 alignment: Alignment.center,
-                                child: Column(
+                                child: what != 'Üzembehelyezés' ?
+                              Text(
+                              '$what',
+                              style: TextStyle(
+                                  fontSize: 9,
+                                  color: Color(0xFF372930),
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.justify,
+                            ) :
+                                Column(
                                   children: [
                                     Text(
                                       'Üzembe',
@@ -63,7 +71,7 @@ class OpStartMobile extends StatelessWidget {
                                 ),
                               ),
                               color: kPrimaryColor,
-                              height: 22,
+                              height: 24,
                               width: 120,
                             ),
                           ],
@@ -80,27 +88,27 @@ class OpStartMobile extends StatelessWidget {
                 ),
                 Container(
                   alignment: Alignment.bottomLeft,
-                  width: size.width*0.26,
-                  constraints: BoxConstraints(maxWidth: 150, minWidth: 35),
+                  width: size.width*0.25,
+                  constraints: BoxConstraints(maxWidth: 140, minWidth: 35),
                   child: Image.asset("assets/images/paragraph-symbol_Q.jpg"),
                 ),
               ],
             ),
-            SizedBox(height: 5,),
+            SizedBox(height: 8,),
             Divider(thickness: 2,),
-            SizedBox(height: 5,),
+            SizedBox(height: 8,),
             Container(
               alignment: Alignment.center,
               child: Text(
                 '$what',
                 style: TextStyle(
-                    fontSize: 22,
+                    fontSize: 24,
                     color: kTextColor,
                     fontWeight: FontWeight.bold),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 12.0),
+              padding: const EdgeInsets.only(top: 16.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -111,22 +119,22 @@ class OpStartMobile extends StatelessWidget {
                     constraints: BoxConstraints(maxWidth: 70, minWidth: 70),
                     child: Image.asset("assets/images/H-ITB_ETAR_LABEL.png"),
                   ),
-                  SizedBox(width: 12,),
+                  SizedBox(width: 16,),
                   Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        width: size.width * 0.62,
+                        width: size.width * 0.61,
                         child: Card(
                           elevation: 12,
-                          margin: EdgeInsets.all(4),
+                          margin: EdgeInsets.symmetric(vertical: 6),
                           child: Padding(
-                            padding: const EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Text(
                               '$text1',
                               style: TextStyle(
-                                  fontSize: 9,
+                                  fontSize: 10,
                                   color: Color(0xFF372930),
                                   fontWeight: FontWeight.bold),
                               textAlign: TextAlign.center,),
@@ -134,16 +142,16 @@ class OpStartMobile extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: size.width * 0.62,
+                        width: size.width * 0.61,
                         child: Card(
                           elevation: 12,
-                          margin: EdgeInsets.all(4),
+                          margin: EdgeInsets.symmetric(vertical: 6),
                           child: Padding(
-                            padding: const EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Text(
                               '$text2 ',
                               style: TextStyle(
-                                  fontSize: 9,
+                                  fontSize: 10,
                                   color: Color(0xFF372930),
                                   fontWeight: FontWeight.bold),
                               textAlign: TextAlign.center,),
@@ -151,16 +159,16 @@ class OpStartMobile extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: size.width * 0.62,
+                        width: size.width * 0.61,
                         child: Card(
                           elevation: 12,
-                          margin: EdgeInsets.all(4),
+                          margin: EdgeInsets.symmetric(vertical: 6),
                           child: Padding(
-                            padding: const EdgeInsets.all(12.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Text(
                               '$text3',
                               style: TextStyle(
-                                  fontSize: 9,
+                                  fontSize: 10,
                                   color: Color(0xFF372930),
                                   fontWeight: FontWeight.bold),
                               textAlign: TextAlign.center,),

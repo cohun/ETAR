@@ -1,4 +1,5 @@
 import 'package:etar_app/Screens/Home/Components/body_opStart_mobile.dart';
+import 'package:etar_app/Screens/Home/Components/body_opStart_tablet.dart';
 import 'package:etar_app/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -20,7 +21,20 @@ class OpStart extends StatelessWidget {
         .size;
     return ScreenTypeLayout(
       breakpoints: ScreenBreakpoints(desktop: 900, tablet: 680, watch: 200),
-      mobile: BodyOpStartMobile(),
+      mobile: BodyOpStartMobile(
+        what: what,
+        imageName: imageName,
+        text1: text1,
+        text2: text2,
+        text3: text3,
+      ),
+      tablet: BodyOpStartTablet(
+        what: what,
+        imageName: imageName,
+        text1: text1,
+        text2: text2,
+        text3: text3,
+      ),
       desktop: Padding(
         padding: const EdgeInsets.fromLTRB(50, 20, 10, 20),
         child: Row(
@@ -112,7 +126,7 @@ class OpStart extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40.0),
+                    padding: const EdgeInsets.only(top: 35.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

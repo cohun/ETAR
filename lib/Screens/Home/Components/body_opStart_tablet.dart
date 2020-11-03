@@ -1,9 +1,9 @@
 
-import 'package:etar_app/Screens/Home/opStart/opStart_mobile.dart';
+import 'package:etar_app/Screens/Home/opStart/opStart_tablet.dart';
 import 'package:flutter/material.dart';
 
-class BodyOpStartMobile extends StatelessWidget {
-  const BodyOpStartMobile(
+class BodyOpStartTablet extends StatelessWidget {
+  const BodyOpStartTablet(
       {Key key, this.what, this.imageName, this.text1, this.text2, this.text3})
       : super(key: key);
   final String what;
@@ -15,12 +15,12 @@ class BodyOpStartMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+      padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          OpStartMobile(
+          OpStartTablet(
             what: what,
             imageName: imageName,
             text1: text1,
