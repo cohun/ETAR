@@ -11,25 +11,70 @@ class EtarAppScreen extends StatelessWidget {
           color: Colors.blueGrey[900],
           child: ListView(
              children: [
-               SizedBox(height: size.height* .15),
+               SizedBox(height: size.height* .12),
                Padding(
                  padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 50),
                  child: ListTile(
                    tileColor: Color(0xFF9B0000),
-                   title: Text('ETAR = Elektronikus Termék Azonosító Rendszer. Az emelőgépek, teherfelvevő eszközök '
-                       'üzemeltetésével kapcsolatos adminisztrációs feladatok ellátásához nyújt hathatós segítséget. ',
-                   style: TextStyle(color: Color(0xFFFFFF00)),),
+                   title: Padding(
+                     padding: const EdgeInsets.all(8.0),
+                     child: Center(
+                       child: Text('ETAR = Elektronikus Termék Azonosító Rendszer. Az emelőgépek, teherfelvevő eszközök '
+                           'üzemeltetésével kapcsolatos adminisztrációs feladatok ellátásához nyújt hathatós segítséget. ',
+                       style: TextStyle(color: Color(0xFFFFFF00)),),
+                     ),
+                   ),
                  ),
                ),
-               Padding(
-                 padding: const EdgeInsets.symmetric(vertical: 32.0, horizontal: 50),
-                 child: Row(
-                   children: [
-                     Icon(Icons.article, size: 50, color: Colors.white60,),
-                     SizedBox(width: 24,),
-                     Text('Nyilvántartási kötelezettség',
-                       style: TextStyle(color: Colors.white70, fontSize: 44),),
-                   ],
+               Container(
+                 width: size.width,
+                 child: Padding(
+                   padding: const EdgeInsets.symmetric(vertical: 80.0, horizontal: 50),
+                   child: Row(
+                     mainAxisSize: MainAxisSize.max,
+                     mainAxisAlignment: MainAxisAlignment.center,
+                     children: [
+                       Icon(Icons.article, size: 50, color: Colors.white60,),
+                       SizedBox(width: 24,),
+                       Text('Eszközök nyilvántartása',
+                         style: TextStyle(color: Colors.white70, fontSize: 44),),
+                       SizedBox(width: 24,),
+                       Icon(Icons.double_arrow_sharp, size: 50, color: Colors.white60,),
+                       SizedBox(width: 24,),
+                       Column(
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                         children: [
+                           Card(
+                             child: Padding(
+                               padding: const EdgeInsets.all(8.0),
+                               child: Text('műszaki adatok',
+                                 style: TextStyle(color: Colors.blueGrey[900], fontSize: 13),),
+                             ),
+                           ),
+                           Card(
+                             child: Padding(
+                               padding: const EdgeInsets.all(8.0),
+                               child: Text('egyedi azonosítók',
+                                 style: TextStyle(color: Colors.blueGrey[900], fontSize: 13),),
+                             ),
+                           ),
+                           Card(
+                             child: Padding(
+                               padding: const EdgeInsets.all(8.0),
+                               child: Text('használat helyszíne',
+                                 style: TextStyle(color: Colors.blueGrey[900], fontSize: 13),),
+                             ),
+                           ),
+                           Card(
+                             child: Padding(
+                               padding: const EdgeInsets.all(8.0),
+                               child: Text('felhasználó',
+                                 style: TextStyle(color: Colors.blueGrey[900], fontSize: 13),),
+                             ),
+                           ),
+                       ],)
+                     ],
+                   ),
                  ),
                ),
              ],
