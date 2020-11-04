@@ -1,5 +1,5 @@
 
-import 'package:etar_app/Screens/Home/etarApp/etarApp.dart';
+import 'package:etar_app/Screens/Home/etarApp/etarApp_screen.dart';
 import 'package:etar_app/Screens/Home/home_screen.dart';
 import 'package:etar_app/Screens/Home/inspection/inspection_screen.dart';
 import 'package:etar_app/Screens/Home/maintenance/maintenance_screen.dart';
