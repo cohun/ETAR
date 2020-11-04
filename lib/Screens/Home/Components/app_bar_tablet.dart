@@ -70,7 +70,7 @@ class NavigationBarTablet extends StatelessWidget {
             DefaultButton(
               text: "ETAR app",
               press: () {
-                return locator<NavigationService>().navigateTo('repair');
+                return locator<NavigationService>().navigateTo('etarApp');
               },
             ),
           ],
