@@ -69,13 +69,25 @@ class BodyMobile extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 10),
-                        Text(
-                          "ETAR app".toUpperCase(),
-                          style: TextStyle(
-                            color: Color(0xFFFFFF00),
-                            fontWeight: FontWeight.bold,
-                            fontSize: 13,
-                          ),
+                        Column(
+                          children: [
+                            Text(
+                              "ETAR app".toUpperCase(),
+                              style: TextStyle(
+                                color: Color(0xFFFFFF00),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 13,
+                              ),
+                            ),
+                            Text(
+                              "oktató anyagok".toUpperCase(),
+                              style: TextStyle(
+                                color: Color(0xFFFFFF00),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 8,
+                              ),
+                            ),
+                          ],
                         ),
                         SizedBox(width: 10),
                       ],

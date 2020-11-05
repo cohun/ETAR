@@ -76,13 +76,25 @@ class Body extends StatelessWidget {
                             ),
                           ),
                           SizedBox(width: 15),
-                          Text(
-                            "ETAR app".toUpperCase(),
-                            style: TextStyle(
-                              color: Color(0xFFFFFF00),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 19,
-                            ),
+                          Column(
+                            children: [
+                              Text(
+                                "ETAR app".toUpperCase(),
+                                style: TextStyle(
+                                  color: Color(0xFFFFFF00),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 19,
+                                ),
+                              ),
+                              Text(
+                                "oktató anyagok".toUpperCase(),
+                                style: TextStyle(
+                                  color: Color(0xFFFFFF00),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 9,
+                                ),
+                              ),
+                            ],
                           ),
                           SizedBox(width: 15),
                         ],

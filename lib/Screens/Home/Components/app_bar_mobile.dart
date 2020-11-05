@@ -12,28 +12,31 @@ class NavigationBarMobile extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
-          SizedBox(width: 20,),
-
+          SizedBox(
+            width: 20,
+          ),
           InkWell(
-            onTap: (){
+            onTap: () {
               Scaffold.of(context).openDrawer();
             },
             child: Icon(
               Icons.menu,
               size: 28,
+              color: Colors.white70,
             ),
           ),
           Spacer(),
           DefaultButton(
             text: "ETAR app",
-            press: () {return NavigationDrawer();},
+            press: () {
+              return NavigationDrawer();
+            },
           ),
-          SizedBox(width: 20,),
+          SizedBox(
+            width: 20,
+          ),
         ],
       ),
     );
   }
-
-
-
 }
