@@ -16,7 +16,7 @@ class EtarAppTablet extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(vertical: 24.0, horizontal: 20),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12.0),
+                  borderRadius: BorderRadius.circular(8.0),
                   child: ListTile(
                     tileColor: Color(0xFF9B0000),
                     title: Padding(

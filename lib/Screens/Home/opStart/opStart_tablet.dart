@@ -1,5 +1,7 @@
 
 import 'package:etar_app/constant.dart';
+import 'package:etar_app/locator.dart';
+import 'package:etar_app/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 
 class OpStartTablet extends StatelessWidget {
@@ -76,10 +78,13 @@ class OpStartTablet extends StatelessWidget {
                 size: 52,
                 color: kPrimaryColor,
               ),
-              Container(
-                alignment: Alignment.bottomRight,
-                constraints: BoxConstraints(maxWidth: 200, minWidth: 200),
-                child: Image.asset("assets/images/paragraph-symbol_Q.jpg"),
+              InkWell(
+                onTap: () => locator<NavigationService>().navigateTo('law'),
+                child: Container(
+                  alignment: Alignment.bottomRight,
+                  constraints: BoxConstraints(maxWidth: 200, minWidth: 200),
+                  child: Image.asset("assets/images/paragraph-symbol_Q.jpg"),
+                ),
               ),
             ],
           ),

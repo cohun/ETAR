@@ -1,5 +1,7 @@
 
 import 'package:etar_app/constant.dart';
+import 'package:etar_app/locator.dart';
+import 'package:etar_app/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 
 class OpStartMobile extends StatelessWidget {
@@ -86,11 +88,14 @@ class OpStartMobile extends StatelessWidget {
                   size: 20,
                   color: kPrimaryColor,
                 ),
-                Container(
-                  alignment: Alignment.bottomLeft,
-                  width: size.width*0.25,
-                  constraints: BoxConstraints(maxWidth: 140, minWidth: 35),
-                  child: Image.asset("assets/images/paragraph-symbol_Q.jpg"),
+                InkWell(
+                  onTap: () => locator<NavigationService>().navigateTo('law'),
+                  child: Container(
+                    alignment: Alignment.bottomLeft,
+                    width: size.width*0.25,
+                    constraints: BoxConstraints(maxWidth: 140, minWidth: 35),
+                    child: Image.asset("assets/images/paragraph-symbol_Q.jpg"),
+                  ),
                 ),
               ],
             ),
