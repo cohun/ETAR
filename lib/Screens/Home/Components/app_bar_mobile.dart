@@ -1,5 +1,6 @@
 import 'package:etar_app/Components/default_button.dart';
-import 'package:etar_app/Screens/Home/Components/navigation_drawer/navigation_drawer.dart';
+import 'package:etar_app/locator.dart';
+import 'package:etar_app/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 
 class NavigationBarMobile extends StatelessWidget {
@@ -29,7 +30,7 @@ class NavigationBarMobile extends StatelessWidget {
           DefaultButton(
             text: "ETAR app",
             press: () {
-              return NavigationDrawer();
+              return locator<NavigationService>().navigateTo('etarApp');
             },
           ),
           SizedBox(
