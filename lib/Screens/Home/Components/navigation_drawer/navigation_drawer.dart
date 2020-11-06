@@ -13,48 +13,56 @@ class NavigationDrawer extends StatelessWidget {
       boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 16),
       ],
       ),
-      child: Column(
-        children: [
-          NavigationDrawerHeader(),
-          DrawerItem(
-              title: 'Főoldal', icon: Icons.home,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            NavigationDrawerHeader(),
+            DrawerItem(
+                title: 'Főoldal', icon: Icons.home,
+                press: () {
+                  locator<NavigationService>().navigateTo('home');
+                  return Navigator.of(context).pop();
+                }
+            ),
+            DrawerItem(
+              title: 'Üzembehelyezés', icon: Icons.article,
               press: () {
-                locator<NavigationService>().navigateTo('home');
+                locator<NavigationService>().navigateTo('opStart');
                 return Navigator.of(context).pop();
               }
-          ),
-          DrawerItem(
-            title: 'Üzembehelyezés', icon: Icons.article,
-            press: () {
-              locator<NavigationService>().navigateTo('opStart');
-              return Navigator.of(context).pop();
-            }
-          ),
-          DrawerItem(
-            title: 'Vizsgálatok', icon: Icons.assignment_turned_in_sharp,
-            press: () {
-              locator<NavigationService>().navigateTo('inspection');
-              return Navigator.of(context).pop();
-            },),
-          DrawerItem(
-            title: 'Karbantartás', icon: Icons.work,
-            press: () {
-              locator<NavigationService>().navigateTo('maintenance');
-              return Navigator.of(context).pop();
-            },),
-          DrawerItem(
-            title: 'Javítás', icon: Icons.assistant,
-            press: () {
-              locator<NavigationService>().navigateTo('repair');
-              return Navigator.of(context).pop();
-            },),
-          DrawerItem(
-            title: 'ETAR App', icon: Icons.app_blocking,
-            press: () {
-              locator<NavigationService>().navigateTo('etarApp');
-              return Navigator.of(context).pop();
-            },),
-        ],
+            ),
+            DrawerItem(
+              title: 'Vizsgálatok', icon: Icons.assignment_turned_in_sharp,
+              press: () {
+                locator<NavigationService>().navigateTo('inspection');
+                return Navigator.of(context).pop();
+              },),
+            DrawerItem(
+              title: 'Karbantartás', icon: Icons.work,
+              press: () {
+                locator<NavigationService>().navigateTo('maintenance');
+                return Navigator.of(context).pop();
+              },),
+            DrawerItem(
+              title: 'Javítás', icon: Icons.assistant,
+              press: () {
+                locator<NavigationService>().navigateTo('repair');
+                return Navigator.of(context).pop();
+              },),
+            DrawerItem(
+              title: 'ETAR App', icon: Icons.app_blocking,
+              press: () {
+                locator<NavigationService>().navigateTo('etarApp');
+                return Navigator.of(context).pop();
+              },),
+            DrawerItem(
+              title: 'Oktató anyagok', icon: Icons.videocam_sharp,
+              press: () {
+                locator<NavigationService>().navigateTo('iframe');
+                return Navigator.of(context).pop();
+              },),
+          ],
+        ),
       ),
     );
   }

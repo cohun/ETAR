@@ -42,55 +42,58 @@ class BodyTablet extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                FittedBox(
-                  // Now it just take the required spaces
-                  child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 15),
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Color(0xFF372930),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                          padding: EdgeInsets.all(10),
-                          height: 20,
-                          width: 20,
-                          decoration: BoxDecoration(
-                            color: Color(0xFF9B0000),
-                            shape: BoxShape.circle,
-                          ),
-                          child: Container(
+                InkWell(
+                  onTap: () {return locator<NavigationService>().navigateTo('iframe');},
+                  child: FittedBox(
+                    // Now it just take the required spaces
+                    child: Container(
+                      margin: EdgeInsets.symmetric(vertical: 15),
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Color(0xFF372930),
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            height: 20,
+                            width: 20,
                             decoration: BoxDecoration(
-                              color: Color(0xFF372930),
+                              color: Color(0xFF9B0000),
                               shape: BoxShape.circle,
                             ),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Color(0xFF372930),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
                           ),
-                        ),
-                        SizedBox(width: 10),
-                        Column(
-                          children: [
-                            Text(
-                              "ETAR app".toUpperCase(),
-                              style: TextStyle(
-                                color: Color(0xFFFFFF00),
-                                fontWeight: FontWeight.bold,
-                                fontSize: 13,
+                          SizedBox(width: 10),
+                          Column(
+                            children: [
+                              Text(
+                                "ETAR app".toUpperCase(),
+                                style: TextStyle(
+                                  color: Color(0xFFFFFF00),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13,
+                                ),
                               ),
-                            ),
-                            Text(
-                              "oktató anyagok".toUpperCase(),
-                              style: TextStyle(
-                                color: Color(0xFFFFFF00),
-                                fontWeight: FontWeight.bold,
-                                fontSize: 8,
+                              Text(
+                                "oktató anyagok".toUpperCase(),
+                                style: TextStyle(
+                                  color: Color(0xFFFFFF00),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 8,
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 10),
-                      ],
+                            ],
+                          ),
+                          SizedBox(width: 10),
+                        ],
+                      ),
                     ),
                   ),
                 ),

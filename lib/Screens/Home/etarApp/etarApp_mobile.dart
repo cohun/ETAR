@@ -341,11 +341,11 @@ class EtarAppMobile extends StatelessWidget {
                   ),
                 ),
               ),
-
+              Divider(color: Colors.white70, thickness: 1,),
             ],
           ),
         ),
-        Divider(color: Colors.white70, thickness: 1,),
+
         Align(
           alignment: Alignment.topCenter,
           child: CustomAppBar(),

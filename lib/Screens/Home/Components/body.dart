@@ -49,55 +49,58 @@ class Body extends StatelessWidget {
                   SizedBox(
                     height: 50,
                   ),
-                  FittedBox(
-                    // Now it just take the required spaces
-                    child: Container(
-                      margin: EdgeInsets.symmetric(vertical: 20),
-                      padding: EdgeInsets.all(15),
-                      decoration: BoxDecoration(
-                        color: Color(0xFF372930),
-                        borderRadius: BorderRadius.circular(34),
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            height: 38,
-                            width: 38,
-                            decoration: BoxDecoration(
-                              color: Color(0xFF9B0000),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Container(
+                  InkWell(
+                    onTap: () {return locator<NavigationService>().navigateTo('iframe');},
+                    child: FittedBox(
+                      // Now it just take the required spaces
+                      child: Container(
+                        margin: EdgeInsets.symmetric(vertical: 20),
+                        padding: EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: Color(0xFF372930),
+                          borderRadius: BorderRadius.circular(34),
+                        ),
+                        child: Row(
+                          children: <Widget>[
+                            Container(
+                              padding: EdgeInsets.all(10),
+                              height: 38,
+                              width: 38,
                               decoration: BoxDecoration(
-                                color: Color(0xFF372930),
+                                color: Color(0xFF9B0000),
                                 shape: BoxShape.circle,
                               ),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF372930),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
                             ),
-                          ),
-                          SizedBox(width: 15),
-                          Column(
-                            children: [
-                              Text(
-                                "ETAR app".toUpperCase(),
-                                style: TextStyle(
-                                  color: Color(0xFFFFFF00),
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 19,
+                            SizedBox(width: 15),
+                            Column(
+                              children: [
+                                Text(
+                                  "ETAR app".toUpperCase(),
+                                  style: TextStyle(
+                                    color: Color(0xFFFFFF00),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 19,
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                "oktató anyagok".toUpperCase(),
-                                style: TextStyle(
-                                  color: Color(0xFFFFFF00),
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 9,
+                                Text(
+                                  "oktató anyagok".toUpperCase(),
+                                  style: TextStyle(
+                                    color: Color(0xFFFFFF00),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 9,
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(width: 15),
-                        ],
+                              ],
+                            ),
+                            SizedBox(width: 15),
+                          ],
+                        ),
                       ),
                     ),
                   ),
