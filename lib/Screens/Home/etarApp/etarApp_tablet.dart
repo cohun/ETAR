@@ -1,37 +1,65 @@
 import 'package:etar_app/Screens/Home/Components/app_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class EtarAppTablet extends StatelessWidget {
+  _launchURL() async {
+    const url = 'https://play.google.com/store/apps/details?id=com.attila.hitb&hl=en_US&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Stack(
       children: <Widget>[
         Container(
-          color: Colors.blueGrey[900],
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/ETAR_canvas.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
           child: ListView(
             children: [
               SizedBox(height: size.height * .12),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 24.0, horizontal: 20),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
-                  child: ListTile(
-                    tileColor: Color(0xFF9B0000),
-                    title: Padding(
-                      padding: const EdgeInsets.all(8.0),
+
+                padding: const EdgeInsets.fromLTRB(10, 15, 10, 0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      width: size.width * 0.2,
+                      child: Image.asset("assets/images/Etar.png"),
+                    ),
+                    Icon(Icons.double_arrow_sharp, size: 30, color: Colors.white60,),
+                    InkWell(
+                      child: Container(
+                        width: size.width * 0.30,
+                        child: Image.asset('assets/images/google-play-badge.png'),
+                      ),
+                      onTap: _launchURL,
+                    ),
+                  ],
+                ),
+    ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 50),
                       child: Center(
                         child: Text(
                           'ETAR = Elektronikus Termék Azonosító Rendszer. Az emelőgépek, teherfelvevő eszközök '
                           'üzemeltetésével kapcsolatos adminisztrációs feladatok ellátásához nyújt hathatós segítséget. ',
-                          style: TextStyle(color: Color(0xFFFFFF00)),
+                          style: TextStyle(color: Colors.black54,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,),
                         ),
                       ),
                     ),
-                  ),
-                ),
-              ),
               Divider(
                 color: Colors.white70,
                 thickness: 1,
@@ -65,7 +93,7 @@ class EtarAppTablet extends StatelessWidget {
                       Icon(
                         Icons.double_arrow_sharp,
                         size: 30,
-                        color: Colors.white60,
+                        color: Colors.black54,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,60 +103,53 @@ class EtarAppTablet extends StatelessWidget {
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.quick_contacts_mail_sharp),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'jogosultság osztó',
+                                  Icon(Icons.quick_contacts_mail_sharp, color: Colors.white70,),
+                                  SizedBox(width: 8,),
+                                  Text('jogosultság osztó',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
                           Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.auto_fix_high),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'írási jogosultság',
+                                  Icon(Icons.auto_fix_high, color: Colors.white70,),
+                                  SizedBox(width: 8,),
+                                  Text('írási jogosultság',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
                           Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.auto_stories),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'olvasási jogosultság',
+                                  Icon(Icons.auto_stories, color: Colors.white70),
+                                  SizedBox(width: 8,),
+                                  Text('olvasási jogosultság',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
-                        ],
-                      )
+                        ],),
                     ],
                   ),
                 ),
@@ -166,7 +187,7 @@ class EtarAppTablet extends StatelessWidget {
                       Icon(
                         Icons.double_arrow_sharp,
                         size: 30,
-                        color: Colors.white60,
+                        color: Colors.black54,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -176,79 +197,70 @@ class EtarAppTablet extends StatelessWidget {
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.height),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'műszaki adatok',
+                                  Icon(Icons.height, color: Colors.white70,),
+                                  SizedBox(width: 8,),
+                                  Text('műszaki adatok',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
                           Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.nfc_sharp),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'egyedi azonosítók',
+                                  Icon(Icons.nfc_sharp, color: Colors.white70,),
+                                  SizedBox(width: 8,),
+                                  Text('egyedi azonosítók',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
                           Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.house_siding_sharp),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'használat helyszíne',
+                                  Icon(Icons.house_siding_sharp, color: Colors.white70,),
+                                  SizedBox(width: 8,),
+                                  Text('használat helyszíne',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
                           Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.person),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'felhasználó',
+                                  Icon(Icons.person, color: Colors.white70,),
+                                  SizedBox(width: 8,),
+                                  Text('felhasználó',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
-                        ],
-                      )
+                        ],),
                     ],
                   ),
                 ),
@@ -286,7 +298,7 @@ class EtarAppTablet extends StatelessWidget {
                       Icon(
                         Icons.double_arrow_sharp,
                         size: 30,
-                        color: Colors.white60,
+                        color: Colors.black54,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -296,79 +308,70 @@ class EtarAppTablet extends StatelessWidget {
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.mark_chat_read),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'üzembehelyezés jegyzőkönyve',
+                                  Icon(Icons.mark_chat_read, color: Colors.white70,),
+                                  SizedBox(width: 8,),
+                                  Text('üzembehelyezés jegyzőkönyve',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
                           Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.assignment_turned_in_sharp),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'időszakos vizsgálatok jegyzőkönyvei',
+                                  Icon(Icons.assignment_turned_in_sharp, color: Colors.white70,),
+                                  SizedBox(width: 8,),
+                                  Text('időszakos vizsgálatok jegyzőkönyvei',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
                           Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.work),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'karbantartások jegyzőkönyvei',
+                                  Icon(Icons.work, color: Colors.white70,),
+                                  SizedBox(width: 8,),
+                                  Text('karbantartások jegyzőkönyvei',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
                           Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.verified_outlined),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'javítások jegyzőkönyvei',
+                                  Icon(Icons.verified_outlined, color: Colors.white70,),
+                                  SizedBox(width: 8,),
+                                  Text('javítások jegyzőkönyvei',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
-                        ],
-                      )
+                        ],),
                     ],
                   ),
                 ),
@@ -406,7 +409,7 @@ class EtarAppTablet extends StatelessWidget {
                       Icon(
                         Icons.double_arrow_sharp,
                         size: 30,
-                        color: Colors.white60,
+                        color: Colors.black54,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -416,98 +419,87 @@ class EtarAppTablet extends StatelessWidget {
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.mark_chat_read),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'eszköz azonosítás NFC chip alapján',
+                                  Icon(Icons.mark_chat_read, color: Colors.white70),
+                                  SizedBox(width: 8,),
+                                  Text('eszköz azonosítás NFC chip alapján',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
                           Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.assignment_turned_in_sharp),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'eszköz azonosítás gyáriszám alapján',
+                                  Icon(Icons.assignment_turned_in_sharp, color: Colors.white70),
+                                  SizedBox(width: 8,),
+                                  Text('eszköz azonosítás gyáriszám alapján',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
                           Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.work),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'szűrések helyszínre, felhasználóra',
+                                  Icon(Icons.work, color: Colors.white70),
+                                  SizedBox(width: 8,),
+                                  Text('szűrések helyszínre, felhasználóra',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
                           Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.pending_actions_outlined),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'szűrések következő időpontra',
+                                  Icon(Icons.pending_actions_outlined, color: Colors.white70),
+                                  SizedBox(width: 8,),
+                                  Text('szűrések következő időpontra',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
                           Card(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: [
-                                  Icon(Icons.assistant),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    'excel export',
+                                  Icon(Icons.assistant, color: Colors.white70),
+                                  SizedBox(width: 8,),
+                                  Text('excel export',
                                     style: TextStyle(
-                                        color: Colors.blueGrey[900],
-                                        fontSize: 13),
+                                      color: Colors.white70, fontSize: 14,
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
+                            color: Colors.blue[800],
                           ),
-                        ],
-                      )
+                        ],),
                     ],
                   ),
                 ),

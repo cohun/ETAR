@@ -2,10 +2,19 @@ import 'package:etar_app/locator.dart';
 import 'package:etar_app/services/navigation_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../constant.dart';
 
 class BodyTablet extends StatelessWidget {
+  _launchURL() async {
+    const url = 'https://play.google.com/store/apps/details?id=com.attila.hitb&hl=en_US&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -21,10 +30,20 @@ class BodyTablet extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  width: size.width * 0.22,
-                  child: Image.asset("assets/images/Etar.png"),
-                ),
+
+                    Container(
+                      width: size.width * 0.22,
+                      child: Image.asset("assets/images/Etar.png"),
+                    ),
+
+                    InkWell(
+                      child: Container(
+                        width: size.width * 0.18,
+                        child: Image.asset('assets/images/google-play-badge.png'),
+                      ),
+                      onTap: _launchURL,
+                    ),
+
                 SizedBox(
                   height: 20,
                 ),

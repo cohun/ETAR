@@ -141,7 +141,7 @@ class EtarAppScreen extends StatelessWidget {
                                ),
                                color: Colors.blue[800],
                              ),
-                           ],)
+                           ],),
                        ],
                      ),
                    ),
@@ -235,7 +235,7 @@ class EtarAppScreen extends StatelessWidget {
                                ),
                                color: Colors.blue[800],
                              ),
-                         ],)
+                         ],),
                        ],
                      ),
                    ),
@@ -329,7 +329,7 @@ class EtarAppScreen extends StatelessWidget {
                                ),
                                color: Colors.blue[800],
                              ),
-                           ],)
+                           ],),
                        ],
                      ),
                    ),
@@ -440,7 +440,7 @@ class EtarAppScreen extends StatelessWidget {
                                ),
                                color: Colors.blue[800],
                              ),
-                           ],)
+                           ],),
                        ],
                      ),
                    ),

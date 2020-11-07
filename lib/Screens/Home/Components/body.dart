@@ -47,6 +47,7 @@ class Body extends StatelessWidget {
                         width: size.width * 0.15,
                         child: Image.asset("assets/images/Etar.png"),
                       ),
+                      SizedBox(width: size.width* 0.01,),
                       Icon(Icons.double_arrow_sharp, size: 50, color: Colors.white60,),
                       InkWell(
                         child: Container(
