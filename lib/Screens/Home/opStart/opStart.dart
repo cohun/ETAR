@@ -94,7 +94,7 @@ class OpStart extends StatelessWidget {
                             'Törvényi háttér:',
                             style: TextStyle(
                               fontSize: 28,
-                              color: kPrimaryColor.withOpacity(0.8),
+                              color: Colors.white60,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -103,7 +103,7 @@ class OpStart extends StatelessWidget {
                       Icon(
                         Icons.double_arrow_sharp,
                         size: 52,
-                        color: kPrimaryColor,
+                        color: Colors.blueGrey[900],
                       ),
                       InkWell(
                         onTap: () => locator<NavigationService>().navigateTo('law'),
@@ -126,7 +126,7 @@ class OpStart extends StatelessWidget {
                       '$what',
                       style: TextStyle(
                           fontSize: 36,
-                          color: kTextColor,
+                          color: Colors.blueGrey[900],
                           fontWeight: FontWeight.bold),
                     ),
                   ),
@@ -159,10 +159,11 @@ class OpStart extends StatelessWidget {
                                     '$text1',
                                     style: TextStyle(
                                         fontSize: 11,
-                                        color: Color(0xFF372930),
+                                        color: Colors.white70,
                                         fontWeight: FontWeight.bold),
                                     textAlign: TextAlign.center,),
                                 ),
+                                color: Colors.blueGrey[700],
                               ),
                             ),
                             Container(
@@ -176,10 +177,11 @@ class OpStart extends StatelessWidget {
                                     '$text2 ',
                                     style: TextStyle(
                                         fontSize: 11,
-                                        color: Color(0xFF372930),
+                                        color: Colors.white70,
                                         fontWeight: FontWeight.bold),
                                     textAlign: TextAlign.center,),
                                 ),
+                                color: Colors.blueGrey[700],
                               ),
                             ),
                             Container(
@@ -193,10 +195,11 @@ class OpStart extends StatelessWidget {
                                     '$text3',
                                     style: TextStyle(
                                         fontSize: 11,
-                                        color: Color(0xFF372930),
+                                        color: Colors.white70,
                                         fontWeight: FontWeight.bold),
                                     textAlign: TextAlign.center,),
                                 ),
+                                color: Colors.blueGrey[700],
                               ),
                             ),
                           ],
