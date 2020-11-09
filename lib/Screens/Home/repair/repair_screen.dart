@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class RepairScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Stack(
       children: [
         Container(
@@ -18,7 +19,9 @@ class RepairScreen extends StatelessWidget {
         Column(
           children: [
             CustomAppBar(),
-            BodyRepair(),
+            Container(
+              height: size.height * 0.78,
+                child: SingleChildScrollView(child: BodyRepair())),
           ],
         ),
       ],

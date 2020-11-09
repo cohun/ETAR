@@ -18,7 +18,7 @@ class BodyInspection extends StatelessWidget {
       imageName: 'inspection.jpg',
       text1:
       'Minden emlőgépet, teherfüggesztő eszközt üzembehelyezése után, meghatározott időközönként,'
-      ' 1. szerkezeti vizsgálatnak, 2. fővizsgálatnak és 3. időszakos biztonsági felülvizsgálatnak'
+      ' 1. szerkezeti vizsgálatnak, 2. fővizsgálatnak és 3. időszakos biztonsági felülvizsgálatnak '
       'kell alávetni',
       text2:
       'Az EBSZ-en kívül az MSZ 9721-1:2018 jelű szabvány tartalmazza a vizsgálatok szempontjait, követelményeit',

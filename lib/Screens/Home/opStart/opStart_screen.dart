@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class OpStartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Stack(
       children: [
         Container(
@@ -18,7 +19,9 @@ class OpStartScreen extends StatelessWidget {
         Column(
           children: [
             CustomAppBar(),
-            BodyOpStart(),
+            Container(
+              height: size.height*0.78,
+                child: SingleChildScrollView(child: BodyOpStart())),
           ],
         ),
       ],

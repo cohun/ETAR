@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class InspectionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Stack(
       children: [
         Container(
@@ -18,7 +19,9 @@ class InspectionScreen extends StatelessWidget {
         Column(
           children: [
             CustomAppBar(),
-            BodyInspection(),
+            Container(
+              height: size.height * 0.78,
+                child: SingleChildScrollView(child: BodyInspection())),
           ],
         ),
       ],

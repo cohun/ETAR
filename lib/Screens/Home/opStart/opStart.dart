@@ -158,9 +158,9 @@ class OpStart extends StatelessWidget {
                                   child: Text(
                                     '$text1',
                                     style: TextStyle(
-                                        fontSize: 11,
+                                        fontSize: 18,
                                         color: Colors.white70,
-                                        fontWeight: FontWeight.bold),
+                                        ),
                                     textAlign: TextAlign.center,),
                                 ),
                                 color: Colors.blueGrey[700],
@@ -176,9 +176,9 @@ class OpStart extends StatelessWidget {
                                   child: Text(
                                     '$text2 ',
                                     style: TextStyle(
-                                        fontSize: 11,
+                                        fontSize: 18,
                                         color: Colors.white70,
-                                        fontWeight: FontWeight.bold),
+                                        ),
                                     textAlign: TextAlign.center,),
                                 ),
                                 color: Colors.blueGrey[700],
@@ -194,9 +194,9 @@ class OpStart extends StatelessWidget {
                                   child: Text(
                                     '$text3',
                                     style: TextStyle(
-                                        fontSize: 11,
+                                        fontSize: 18,
                                         color: Colors.white70,
-                                        fontWeight: FontWeight.bold),
+                                        ),
                                     textAlign: TextAlign.center,),
                                 ),
                                 color: Colors.blueGrey[700],

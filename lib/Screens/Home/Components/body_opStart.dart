@@ -18,7 +18,7 @@ class BodyOpStart extends StatelessWidget {
       imageName: 'opStart.png',
       text1:
       'Mind az emelőgépeknél, mind a teherfüggesztő eszközöknél előzetes vizsgálatokra '
-          'és a berendezés nyílvánatrtásba vételére van szükség, melynek eredményes lezárásaként '
+          'és a berendezés nyílvántartásba vételére van szükség, melynek eredményes lezárásaként '
           'munkáltató írásban elrendeli az adott eszköz használatát.',
       text2:
       'Általánosságban az emelőgépek rendeltetésszerű használatra való alkalmasságának '

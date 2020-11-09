@@ -21,7 +21,7 @@ class BodyRepair extends StatelessWidget {
           'az üzemeltetésből fakadó események, észrevételek alapján. ',
       text2:
       'A javítás elvégzését bizonylatolni szükséges. '
-          'A munkát végzőnek tanúsitania kell tevékenységének megállapításait, eredményét. (Jegyzőkönyv) ',
+          'A munkát végzőnek tanúsítania kell tevékenységének megállapításait, eredményét. (Jegyzőkönyv) ',
       text3:
       'Csak üzembiztos emelőgéppel szabad munkavégzést folytatni!',
     );
