@@ -18,7 +18,7 @@ class InspectionScreen extends StatelessWidget {
         ),
         Column(
           children: [
-            CustomAppBar(),
+            CustomAppBar(count: 2,),
             Container(
               height: size.height * 0.78,
                 child: SingleChildScrollView(child: BodyInspection())),

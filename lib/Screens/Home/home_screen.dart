@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            CustomAppBar(),
+            CustomAppBar(count: 0,),
             Spacer(),
             // It will cover 1/3 of free spaces
             Body(),

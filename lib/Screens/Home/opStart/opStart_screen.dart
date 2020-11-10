@@ -18,7 +18,7 @@ class OpStartScreen extends StatelessWidget {
         ),
         Column(
           children: [
-            CustomAppBar(),
+            CustomAppBar(count: 1,),
             Container(
               height: size.height*0.78,
                 child: SingleChildScrollView(child: BodyOpStart())),

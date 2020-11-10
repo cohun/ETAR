@@ -6,6 +6,11 @@ import '../../../locator.dart';
 import 'menu_item.dart';
 
 class NavigationBarTablet extends StatelessWidget {
+
+  final int count;
+
+  const NavigationBarTablet({Key key, this.count}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,6 +46,7 @@ class NavigationBarTablet extends StatelessWidget {
            
             MenuItem(
               title: "Üzembehelyezés",
+              isHighlighted: count == 1 ? true : false,
               fontSize: 11,
               press: () {
                 return locator<NavigationService>().navigateTo('opStart');
@@ -48,6 +54,7 @@ class NavigationBarTablet extends StatelessWidget {
             ),
             MenuItem(
               title: "Vizsgálatok",
+              isHighlighted: count == 2 ? true : false,
               fontSize: 11,
               press: () {
                 return locator<NavigationService>().navigateTo('inspection');
@@ -55,6 +62,7 @@ class NavigationBarTablet extends StatelessWidget {
             ),
             MenuItem(
               title: "Karbantartás",
+              isHighlighted: count == 3 ? true : false,
               fontSize: 11,
               press: () {
                 return locator<NavigationService>().navigateTo('maintenance');
@@ -62,6 +70,7 @@ class NavigationBarTablet extends StatelessWidget {
             ),
             MenuItem(
               title: "Javítás",
+              isHighlighted: count == 4 ? true : false,
               fontSize: 11,
               press: () {
                 return locator<NavigationService>().navigateTo('repair');

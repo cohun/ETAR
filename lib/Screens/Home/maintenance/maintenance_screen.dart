@@ -18,7 +18,7 @@ class MaintenanceScreen extends StatelessWidget {
         ),
         Column(
           children: [
-            CustomAppBar(),
+            CustomAppBar(count: 3,),
             Container(
               height: size.height*.78,
                 child: SingleChildScrollView(child: BodyMaintenance())),

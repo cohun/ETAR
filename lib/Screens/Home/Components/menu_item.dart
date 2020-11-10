@@ -5,11 +5,12 @@ import '../../../constant.dart';
 class MenuItem extends StatelessWidget {
   final String title;
   final Function press;
+  final bool isHighlighted;
   final double fontSize;
   const MenuItem({
     Key key,
     this.title,
-    this.press, this.fontSize,
+    this.press, this.fontSize, this.isHighlighted,
   }) : super(key: key);
 
   @override
@@ -21,7 +22,7 @@ class MenuItem extends StatelessWidget {
         child: Text(
           title.toUpperCase(),
           style: TextStyle(
-            color: kTextColor.withOpacity(0.3),
+            color: isHighlighted == true ? kTextColor : kTextColor.withOpacity(0.3),
             fontWeight: FontWeight.bold,
             fontSize: fontSize,
           ),

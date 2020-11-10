@@ -18,7 +18,7 @@ class RepairScreen extends StatelessWidget {
         ),
         Column(
           children: [
-            CustomAppBar(),
+            CustomAppBar(count: 4,),
             Container(
               height: size.height * 0.78,
                 child: SingleChildScrollView(child: BodyRepair())),

@@ -11,6 +11,24 @@ class EtarAppMobile extends StatelessWidget {
       throw 'Could not launch $url';
     }
   }
+  _showDialog(BuildContext context, String title, String text) {
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        elevation: 5.0,
+        title: Text("$title:"),
+        content: Text("$text"),
+        actions: <Widget>[
+          FlatButton(
+            child: Text('Bezár!'),
+            onPressed: () {
+              return Navigator.of(context, rootNavigator: true).pop();
+            },
+          ),
+        ],
+      ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -68,47 +86,79 @@ class EtarAppMobile extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.quick_contacts_mail_sharp, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('jogosultság osztó',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.quick_contacts_mail_sharp, color: Colors.white70,),
+                                    SizedBox(width: 8,),
+                                    Text('jogosultság osztó',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Jogosultság osztó', 'Ha egy cég be akar lépni az ETAR rendszerbe, '
+                                  'először is szerződést kell kötni a használatra vonatkozóan. Itt ki kell jelölni '
+                                  'egy embert, aki az adott cégnél a jogosultságokat kezeli: ő lesz a jogosultság osztó!');
+                            },
                           ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.auto_fix_high, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('írási jogosultság',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: InkWell(
+                              child: Card(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.auto_fix_high, color: Colors.white70,),
+                                      SizedBox(width: 8,),
+                                      Text('írási jogosultság',
+                                        style: TextStyle(
+                                          color: Colors.white70, fontSize: 13,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                color: Colors.blue[800],
                               ),
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Írási jogosultság', 'ETAR rendszerben kezelt adatok megváltoztatásához, '
+                                  'írási jogosultságra van szükség. Ezt az adott cég jogosultság kezelője adja meg. '
+                              );
+                            },
                           ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.auto_stories, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('olvasási jogosultság',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.auto_stories, color: Colors.white70),
+                                    SizedBox(width: 8,),
+                                    Text('olvasási jogosultság',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Olvasási jogosultság', 'ETAR rendszerben kezelt adatok'
+                                  ' megtekintéséhez, olvasási jogosultságra van szükség. Ezt az adott cég jogosultság '
+                                  'kezelője adja meg.' );
+                            },
                           ),
                         ],)
                     ],
@@ -136,61 +186,98 @@ class EtarAppMobile extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.height, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('műszaki adatok',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.height, color: Colors.white70,),
+                                    SizedBox(width: 8,),
+                                    Text('műszaki adatok',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Műszaki adatok', 'Az eszköz típusa, mérete, megnevezése, '
+                                  'teherbírása, gyártója és a gyártás éve kerül rögzítésre');
+                            },
                           ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.nfc_sharp, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('egyedi azonosítók',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.nfc_sharp, color: Colors.white70,),
+                                    SizedBox(width: 8,),
+                                    Text('egyedi azonosítók',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Egyedi azonosítók', 'Az eszköz gyári száma, '
+                                  'egy további tetszőleges azonosító, valamint az NFC kód kerül rögzítésre');
+                            },
                           ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.house_siding_sharp,color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('használat helyszíne',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.house_siding_sharp, color: Colors.white70,),
+                                    SizedBox(width: 8,),
+                                    Text('használat helyszíne',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Használat helyszíne', 'Tetszőleges számú helyszínt rögzíthetünk, '
+                                  'mely helyszínek közül kiválasztjuk és hozzárendeljük az aktuálisat az adott eszközhöz. '
+                                  'Így mindig láthatóvá válik, hogy az adott eszköz hol van használatban?');
+                            },
                           ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.person, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('felhasználó',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.person, color: Colors.white70,),
+                                    SizedBox(width: 8,),
+                                    Text('felhasználó',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Felhasználó/ üzemeltető', 'Tetszőleges számú üzemeltetőt rögzíthetünk '
+                                  'és így dolgozóknak lehet utána névreszólóan az eszközöket kiadni.');
+                            },
                           ),
                         ],)
                     ],
@@ -218,61 +305,102 @@ class EtarAppMobile extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.mark_chat_read, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('üzembehelyezés jegyzőkönyve',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.mark_chat_read, color: Colors.white70,),
+                                    SizedBox(width: 8,),
+                                    Text('üzembehelyezés jegyzőkönyve',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Üzembehelyezés jegyzőkönyve', 'Az emelőgép használatba vételét írásban '
+                                  'kell elrendelni, melyet az üzembehelyezési jegyzőkönyv tanúsít. Minden eszköz könnyen beazonosítható '
+                                  'és a hozzátartozó üzembehelyezési jegyzőkönyv azonnal elérhető');
+                            },
                           ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.assignment_turned_in_sharp, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('időszakos vizsgálatok jegyzőkönyvei',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.assignment_turned_in_sharp, color: Colors.white70,),
+                                    SizedBox(width: 8,),
+                                    Text('időszakos vizsgálatok jegyzőkönyvei',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Időszakos vizsgálatok jegyzőkönyvei', 'Az elvégzett időszakos vizsgálatok '
+                                  'jegyzőkönyvei tárolásra kerülnek. '
+                                  'Minden eszköz könnyen beazonosítható, érvényessége ellenőrizhető és a következő, esedékes vizsgálat '
+                                  'időpontjára a program hívja fel a figyelmet.');
+                            },
                           ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.work, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('karbantartások jegyzőkönyvei',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.work, color: Colors.white70,),
+                                    SizedBox(width: 8,),
+                                    Text('karbantartások jegyzőkönyvei',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Karbantartások jegyzőkönyvei', 'Az elvégzett karbantartások '
+                                  'jegyzőkönyvei tárolásra kerülnek. '
+                                  'Minden eszköz könnyen beazonosítható és az összes elvégzett karbantartás időpontja azonnal elérhető.');
+                            },
                           ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.verified_outlined, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('javítások jegyzőkönyvei',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.verified_outlined, color: Colors.white70,),
+                                    SizedBox(width: 8,),
+                                    Text('javítások jegyzőkönyvei',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Javítások jegyzőkönyvei', 'Az elvégzett javítások '
+                                  'jegyzőkönyvei tárolásra kerülnek. '
+                                  'Minden eszköz könnyen beazonosítható és az összes elvégzett javítás időpontja azonnal elérhető.');
+                            },
                           ),
                         ],)
                     ],
@@ -300,75 +428,121 @@ class EtarAppMobile extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.mark_chat_read, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('eszköz azonosítás NFC chip alapján',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.mark_chat_read, color: Colors.white70),
+                                    SizedBox(width: 8,),
+                                    Text('eszköz azonosítás NFC chip alapján',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Azonosítás NFC chippel', 'Az adattáblára helyezett NFC chip adatait '
+                                  'NFC képes mobil telefonnal lehet kiolvasni. Az így kiolvasott kód alapján a program megkeresi az adott '
+                                  'eszköz valamennyi adatát.');
+                            },
                           ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.assignment_turned_in_sharp, color: Colors.white70),
-                                  SizedBox(width: 8,),
-                                  Text('eszköz azonosítás gyáriszám alapján',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.assignment_turned_in_sharp, color: Colors.white70),
+                                    SizedBox(width: 8,),
+                                    Text('eszköz azonosítás gyáriszám alapján',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Azonosítás gyáriszámmal', 'Az adattáblán szereplő gyáriszám '
+                                  'alapján a program megkeresi az adott eszköz valamennyi adatát.');
+                            },
                           ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.work, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('szűrések helyszínre, felhasználóra',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.work, color: Colors.white70),
+                                    SizedBox(width: 8,),
+                                    Text('szűrések helyszínre, felhasználóra',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Szűrések', 'Helyszínre, üzemeltetőre és vizsgálati lejárat időpontjára '
+                                  'lehet leszűrni eszközeinket.');
+                            },
                           ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.pending_actions_outlined, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('szűrések következő időpontra',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.pending_actions_outlined, color: Colors.white70),
+                                    SizedBox(width: 8,),
+                                    Text('szűrések következő időpontra',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Szűrések', 'Helyszínre, üzemeltetőre és vizsgálati lejárat időpontjára '
+                                  'lehet leszűrni eszközeinket.');
+                            },
                           ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.assistant, color: Colors.white70,),
-                                  SizedBox(width: 8,),
-                                  Text('excel export',
-                                    style: TextStyle(color: Colors.white70, fontSize: 13),),
-                                ],
+                          InkWell(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.assistant, color: Colors.white70),
+                                    SizedBox(width: 8,),
+                                    Text('excel export',
+                                      style: TextStyle(
+                                        color: Colors.white70, fontSize: 13,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
+                              color: Colors.blue[800],
                             ),
-                            color: Colors.blue[700],
+                            onTap: () {
+                              return _showDialog(context, 'Excel export', 'Az eszközök adatai és '
+                                  'a következő időpont exportálható egy excel fájlba.');
+                            },
                           ),
                         ],),
                     ],
