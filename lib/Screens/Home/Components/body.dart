@@ -1,3 +1,4 @@
+import 'package:etar_app/Components/dialogs.dart';
 import 'package:etar_app/Screens/Home/Components/body_mobile.dart';
 import 'package:etar_app/Screens/Home/Components/body_tablet.dart';
 import 'package:etar_app/locator.dart';
@@ -10,9 +11,9 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../../constant.dart';
 
 class Body extends StatelessWidget {
-
   _launchURL() async {
-    const url = 'https://play.google.com/store/apps/details?id=com.attila.hitb&hl=en_US&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1';
+    const url =
+        'https://play.google.com/store/apps/details?id=com.attila.hitb&hl=en_US&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -29,7 +30,7 @@ class Body extends StatelessWidget {
       tablet: BodyTablet(),
       desktop: Container(
         width: size.width,
-        height: size.height*0.7,
+        height: size.height * 0.7,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,16 +44,33 @@ class Body extends StatelessWidget {
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Container(
-                        width: size.width * 0.15,
-                        child: Image.asset("assets/images/Etar.png"),
+                      InkWell(
+                        onTap: () {
+                          showDialog(
+                              context: context,
+                              builder: (context) {
+                                return PolicyDialog(
+                                    mdFileName: 'aszf.md');
+                              });
+                        },
+                        child: Container(
+                          width: size.width * 0.15,
+                          child: Image.asset("assets/images/Etar.png"),
+                        ),
                       ),
-                      SizedBox(width: size.width* 0.01,),
-                      Icon(Icons.double_arrow_sharp, size: 50, color: Colors.white60,),
+                      SizedBox(
+                        width: size.width * 0.01,
+                      ),
+                      Icon(
+                        Icons.double_arrow_sharp,
+                        size: 50,
+                        color: Colors.white60,
+                      ),
                       InkWell(
                         child: Container(
                           width: size.width * 0.15,
-                          child: Image.asset('assets/images/google-play-badge.png'),
+                          child: Image.asset(
+                              'assets/images/google-play-badge.png'),
                         ),
                         onTap: _launchURL,
                       ),
@@ -62,7 +80,7 @@ class Body extends StatelessWidget {
                     height: 50,
                   ),
                   Container(
-                    width: size.width* 0.35,
+                    width: size.width * 0.35,
                     child: Text(
                       "Elektronikus Termék Azonosító Rendszer: \nÜzemeltetői feladatok szakszerű ellátása, "
                       "\naz Emelőgép Biztonsági Szabályzat előírásai szerint.",
@@ -76,7 +94,9 @@ class Body extends StatelessWidget {
                     height: 50,
                   ),
                   InkWell(
-                    onTap: () {return locator<NavigationService>().navigateTo('iframe');},
+                    onTap: () {
+                      return locator<NavigationService>().navigateTo('iframe');
+                    },
                     child: FittedBox(
                       // Now it just take the required spaces
                       child: Container(
@@ -134,12 +154,11 @@ class Body extends StatelessWidget {
               ),
             ),
             Spacer(),
-
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: size.width*0.57,
+                  width: size.width * 0.57,
                   alignment: Alignment.topRight,
                   constraints: BoxConstraints(maxWidth: 700),
                   child: Row(
@@ -149,12 +168,14 @@ class Body extends StatelessWidget {
                         child: Card(
                           elevation: 12,
                           child: Container(
-                            constraints: BoxConstraints(maxHeight: 140, maxWidth: 120),
+                            constraints:
+                                BoxConstraints(maxHeight: 140, maxWidth: 120),
                             child: Column(
                               children: [
                                 Container(
                                   constraints: BoxConstraints(maxHeight: 100),
-                                    child: Image.asset("assets/images/opStart.png"),
+                                  child:
+                                      Image.asset("assets/images/opStart.png"),
                                 ),
                                 Container(
                                   child: Align(
@@ -176,19 +197,25 @@ class Body extends StatelessWidget {
                             ),
                           ),
                         ),
-                        onTap: () {return locator<NavigationService>().navigateTo('opStart');},
+                        onTap: () {
+                          return locator<NavigationService>()
+                              .navigateTo('opStart');
+                        },
                       ),
                       //******************************************************
                       InkWell(
                         child: Card(
                           elevation: 16,
                           child: Container(
-                            constraints: BoxConstraints(maxHeight: 140, maxWidth: 120),
+                            constraints:
+                                BoxConstraints(maxHeight: 140, maxWidth: 120),
                             child: Column(
                               children: [
                                 Container(
                                   constraints: BoxConstraints(maxHeight: 100),
-                                    child: Image.asset("assets/images/inspection.jpg",),
+                                  child: Image.asset(
+                                    "assets/images/inspection.jpg",
+                                  ),
                                 ),
                                 Container(
                                   child: Align(
@@ -210,19 +237,25 @@ class Body extends StatelessWidget {
                             ),
                           ),
                         ),
-                        onTap: () {return locator<NavigationService>().navigateTo('inspection');},
+                        onTap: () {
+                          return locator<NavigationService>()
+                              .navigateTo('inspection');
+                        },
                       ),
                       //*******************************************************
                       InkWell(
                         child: Card(
                           elevation: 12,
                           child: Container(
-                            constraints: BoxConstraints(maxHeight: 140, maxWidth: 120),
+                            constraints:
+                                BoxConstraints(maxHeight: 140, maxWidth: 120),
                             child: Column(
                               children: [
                                 Container(
                                   constraints: BoxConstraints(maxHeight: 100),
-                                    child: Image.asset("assets/images/maintenance.jpg",),
+                                  child: Image.asset(
+                                    "assets/images/maintenance.jpg",
+                                  ),
                                 ),
                                 Container(
                                   child: Align(
@@ -244,17 +277,22 @@ class Body extends StatelessWidget {
                             ),
                           ),
                         ),
-                        onTap: () {return locator<NavigationService>().navigateTo('maintenance');},
+                        onTap: () {
+                          return locator<NavigationService>()
+                              .navigateTo('maintenance');
+                        },
                       ),
                       InkWell(
                         child: Card(
                           elevation: 12,
                           child: Container(
-                            constraints: BoxConstraints(maxHeight: 140, maxWidth: 120),
+                            constraints:
+                                BoxConstraints(maxHeight: 140, maxWidth: 120),
                             child: Column(
                               children: [
                                 Container(
-                                  child: Image.asset("assets/images/serviceMan.jpg"),
+                                  child: Image.asset(
+                                      "assets/images/serviceMan.jpg"),
                                   constraints: BoxConstraints(maxHeight: 100),
                                 ),
                                 Container(
@@ -277,7 +315,10 @@ class Body extends StatelessWidget {
                             ),
                           ),
                         ),
-                        onTap: () {return locator<NavigationService>().navigateTo('repair');},
+                        onTap: () {
+                          return locator<NavigationService>()
+                              .navigateTo('repair');
+                        },
                       ),
                     ],
                   ),
@@ -290,4 +331,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-

@@ -1,0 +1,36 @@
+**Általános Felhasználási Feltételek**
+
+A program letöltésével vagy használatával, ezek a feltételek automatikusan vonatkoznak minden felhasználóra – ezért használat előtt feltétlenül olvassa el és értelmezze az itt leírtakat. Az applikáció, vagy annak részletének másolása, módosítása, vagy az ETAR védjegy bármilyen egyéb felhasználása tilos. Tiltott továbbá a forráskód kinyerésének megkisérlése, más nyelvekre való átültetése, vagy bármilyen származékos verzió létrehozása. Maga az applikáció, az itt szereplő védjegyek, márkanevek, szerző jogok, az adatbázis jogok és minden szellemi jog Horváth Attila tulajdonában vannak.
+
+Horváth Attila arra törekszik, hogy az applikáció a lehető leghatékonyabb és leghasznosabb módon lássa el funkcióját. Ennek érdekében fenntartjuk a jogot, hogy a későbbiekben bármikor változtatásokat eszközöljünk vagy a szolgáltatásokat díjfizetéshez kössük. Azonban az applikáció szolgáltatásaiért soha sem fogunk anélkül díjat kérni, hogy ne közölnénk pontosan, hogy mire történik a díjfizetés.
+
+Az ETAR applikáció olyan személyes adatokat tárol és dolgoz fel, amelyeket a felhasználó közölt az applikáció szolgáltatásainak kinyeréséhez. Felhasználó felelőssége a telefonjának és az applikációhoz való hozzáférés biztonságának megőrzése. Javasoljuk, hogy csak olyan telefonkészüléket használjon, amely annak gyártójának módosítatlan operációs rendszerét használja. Ellenkező esetben a telefon rosszindulatú szofverek áldozatává vállhat, nem garantálható biztonságos működése és az ETAR applikáció nem fog megfelelően működni.
+
+Az applikáció 3. fél szolgáltatásokat is használ, ahol azon szolgálatatók feltételei érvényesek.
+
+Felhasznált 3. fél szolgáltatások:
+
+*   [Google Play Services](https://policies.google.com/terms)
+*   [Google Analytics for Firebase](https://firebase.google.com/terms/analytics)
+
+Felhívjuk a figyelmet, hogy vannak bizonyos dolgok a szolgáltatás vonatkoztatásában , amelyekért Horvath Attila nem vállal felelősséget. Az alkalmazás néhány funkciója aktív internet kapcsolatot igényel. Ez a kapcsolat létrejöhet Wi-Fi-n, vagy mobiltelefon szolgáltató közreműködésével, de Horvath Attila nem tud felelősséget vállani azért, ha az alkalmazás nem működik teljességében, amennyiben az internet kapcsolat nem kielégítő.
+
+Ha a Wi-Fi hatáskörén kívül használjuk az alkalmazást ne feledjük, hogy a mobilszolgáltatóval kötött megállapodás szerint történik az adatkomunikáció. Ennek eredményeképpen, az adatforgalom függvényében további öltségek léphetnek fel. Az alkalmazás használatával a felhasználó felel ezekért a költségekért, úgyanúgy mint az eseteleges további rooming díjakért, ha ilyenek is keletkeznek. Amennyibe a készülék felhasználójaként nem Ön viseli a költségeket, abból indulunk ki, hogy a költségek viselőjétől rendelkezik engedéllyel az applikáció használatára vonatkozólag.
+
+Ehhez kapcsolódóan, Horvath Attila azért sem tud felelősséget vállalni, hogy a felhasználók milyen módon használják jelen szolgáltatást, azaz hogy pl. a készülék feltöltöttsége elégséges-e a szolgáltatás működtetéséhez stb.
+
+Jóllehet arra törekszünk, hogy jelen alkalmazás naprakészen és helyes működéssel szolgáljon minden felhasználót, felhívjuk a figyelmet, hogy harmadik fél által nyújtott szolgáltatásokra hagyatkozunk a mi felhasználóinknak továbbadott információknál. Ezért Horvath Attila nem vállal felelősséget sem közvetlenül sem közvetve információvesztésekért, mely jelen szolgáltás kizárólagos használata esetén bekövetkezhetnek.
+
+A későbbiekben szándékunkban áll az alkalmazást frissíteni. Jelenlegi formájában Android & iOS renszereken elérhető – mindkét rendszerre vonatkozóan (és minden olyan további rendszernél is, ahol még rendszerbe állítjuk) változhatnak a követelmények, és ilyenkor minden felhasználó frissítés elvégzésére kényszerül, amennyiben tovább szeretné használni a szolgáltatást. Horvath Attila nem tesz arra igéretet, hogy csak olyan frissítések történnek, amelyek relevánsak minden felhasználó számára és/vagy működnek a jelen Android & iOS verzióval. Abban az esetben is, amikor a felhasználó minden frissítést elvégez, dönthetünk úgy, hogy nem nyújtjuk tovább szolgáltatásunkat és az alkalmazás működését előzetes bejelentés nélkül leállítjuk és ilyenkor, ha csak nem rendelkezünk máshogy (a) minden jogosultság vagy liszensz jog melyet jelen felhasználói feltételekben rögzítettünk megszűnik; (b) és minden felhasználó köteles az alkalmazás használatát leállítani és amennyiben szükséges törölni az eszközeiről.
+
+**Felhasználási Feltételek Változtatása**
+
+Időről -időre frissítésre kerülhetnek az itt leírtak. Kérjük ezért ellenőrizze rendszeresen az aktuális szolgálatási feltételeinket. Minden változásról ezen alkalmazásba való belépéskor szerezhet tudomást.
+
+Az aktuális verzió 2020-09-30 óta érvényes
+
+**Elérhetőségünk**
+
+Ha a fent leírtakkal kapcsolatban bármilyen kérdés merülne fel az attila.hitb@gmail.com email címen vagyunk elérhetőek
+
+This Terms and Conditions page was generated by [App Privacy Policy Generator](https://app-privacy-policy-generator.firebaseapp.com/)
