@@ -1,4 +1,6 @@
 import 'package:etar_app/Screens/Home/Components/app_bar.dart';
+import 'package:etar_app/locator.dart';
+import 'package:etar_app/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -53,9 +55,12 @@ class EtarAppTablet extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Container(
-                      width: size.width * 0.2,
-                      child: Image.asset("assets/images/Etar.png"),
+                    InkWell(
+                      onTap: () {return locator<NavigationService>().navigateTo('contract');},
+                      child: Container(
+                        width: size.width * 0.2,
+                        child: Image.asset("assets/images/Etar.png"),
+                      ),
                     ),
                     Icon(Icons.double_arrow_sharp, size: 30, color: Colors.white60,),
                     InkWell(

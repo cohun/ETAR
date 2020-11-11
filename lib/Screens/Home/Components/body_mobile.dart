@@ -31,9 +31,12 @@ class BodyMobile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
 
-                    Container(
-                      width: size.width * 0.28,
-                      child: Image.asset("assets/images/Etar.png"),
+                    InkWell(
+                      child: Container(
+                        width: size.width * 0.28,
+                        child: Image.asset("assets/images/Etar.png"),
+                      ),
+                      onTap: () {return locator<NavigationService>().navigateTo('contract');},
                     ),
 
                     InkWell(

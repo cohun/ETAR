@@ -1,6 +1,8 @@
 import 'package:etar_app/Screens/Home/Components/app_bar.dart';
 import 'package:etar_app/Screens/Home/etarApp/etarApp_mobile.dart';
 import 'package:etar_app/Screens/Home/etarApp/etarApp_tablet.dart';
+import 'package:etar_app/locator.dart';
+import 'package:etar_app/services/navigation_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -62,9 +64,12 @@ class EtarAppScreen extends StatelessWidget {
                      mainAxisSize: MainAxisSize.max,
                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                      children: [
-                       Container(
-                         width: size.width * 0.15,
-                         child: Image.asset("assets/images/Etar.png"),
+                       InkWell(
+                         onTap: () {return locator<NavigationService>().navigateTo('contract');},
+                         child: Container(
+                           width: size.width * 0.15,
+                           child: Image.asset("assets/images/Etar.png"),
+                         ),
                        ),
                        Icon(Icons.double_arrow_sharp, size: 50, color: Colors.white60,),
                        InkWell(

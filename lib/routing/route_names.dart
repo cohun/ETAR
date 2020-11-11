@@ -6,3 +6,4 @@ const String Repair = 'repair';
 const String EtarApp = 'etarApp';
 const String Law = 'law';
 const String Iframe = 'iframe';
+const String Contract = 'contract';

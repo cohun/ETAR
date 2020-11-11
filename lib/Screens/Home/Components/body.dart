@@ -1,4 +1,3 @@
-import 'package:etar_app/Components/dialogs.dart';
 import 'package:etar_app/Screens/Home/Components/body_mobile.dart';
 import 'package:etar_app/Screens/Home/Components/body_tablet.dart';
 import 'package:etar_app/locator.dart';
@@ -46,12 +45,7 @@ class Body extends StatelessWidget {
                     children: [
                       InkWell(
                         onTap: () {
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return PolicyDialog(
-                                    mdFileName: 'aszf.md');
-                              });
+                          return locator<NavigationService>().navigateTo('contract');
                         },
                         child: Container(
                           width: size.width * 0.15,

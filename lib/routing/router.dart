@@ -1,4 +1,5 @@
 
+import 'package:etar_app/Screens/Home/Components/contract.dart';
 import 'package:etar_app/Screens/Home/Components/iframe_screen.dart';
 import 'package:etar_app/Screens/Home/etarApp/etarApp_screen.dart';
 import 'package:etar_app/Screens/Home/home_screen.dart';
@@ -29,6 +30,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(LawScreen());
     case Iframe:
       return _getPageRoute(IframeScreen());
+    case Contract:
+      return _getPageRoute(ContractScreen());
     default:
   }
 }
