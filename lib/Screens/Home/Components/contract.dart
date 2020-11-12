@@ -48,30 +48,30 @@ class ContractScreen extends StatelessWidget {
                         height: 20,
                       ),
                       Text(
-                          'A használat megkezdéséhez szerződés megkötése szükséges a Szolgáltatóval.',
+                        '•   A használat megkezdéséhez szerződés megkötése szükséges a Szolgáltatóval.',
                         style:
                         TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
                       ),
                       Text(
-                          'Szerződéskötéskor üzemeltető cég kijelöli azon munkatársát, aki '
+                          '•   Szerződéskötéskor üzemeltető cég kijelöli azon munkatársát, aki '
                           'a cégen belüli felvételeket és jogosultságokat kezelni fogja.',
                         style:
                         TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
                       ),
                       Text(
-                          'A jogosultság kezelő, miután létrehozza saját felhasználói fiókját, '
+                          '•   A jogosultság kezelő, miután létrehozza saját felhasználói fiókját, '
                           'a cégnév és saját nevének megadásával a programon belül kezdeményezi a '
                           'cég egyedi azonosítójának - az ETAR kódnak - a kiadását',
                         style:
                         TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
                       ),
                       Text(
-                          'Ezt követően szolgáltató a megkötött szerződés alapján érvényesíti az ETAR kódot.',
+                          '•   Ezt követően szolgáltató a megkötött szerződés alapján érvényesíti az ETAR kódot.',
                         style:
                         TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
                       ),
                       Text(
-                          'Innentől kezdve az érvényes ETAR kóddal rendelkező cég élvezheti '
+                          '•   Innentől kezdve az érvényes ETAR kóddal rendelkező cég élvezheti '
                           'a rendszer teljes funkcionalitását és a jogosultság kezelő, saját '
                           'hatáskörben további felhasználókat vehet fel ill. jogosultságukat kezelheti.',
                         style:
@@ -107,20 +107,20 @@ class ContractScreen extends StatelessWidget {
                         height: 20,
                       ),
                       Text(
-                          'Új felhasználó, miután letöltötte az applikációt és létrehozta saját felhasználói '
+                          '•   Új felhasználó, miután letöltötte az applikációt és létrehozta saját felhasználói '
                           'fiókját a rendelkezésére bocsájtott ETAR kóddal kezdeményezheti felvételét '
                           'az ETAR rendszerbe.',
                           style:
                           TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
                       ),
                       Text(
-                          'A cég jogosultság kezelője bírálja el a felvételi kérelmet és '
+                          '•   A cég jogosultság kezelője bírálja el a felvételi kérelmet és '
                           'dönti el milyen jogosultsággal rendelkezzen az új felhasználó.',
                         style:
                         TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
                       ),
                       Text(
-                          'Alapvetően irási jogosultság és olvasási jogosultság szerezhető meg. '
+                          '•   Alapvetően irási jogosultság és olvasási jogosultság szerezhető meg. '
                           'Az olvasási jogosultság olyan felhasználóknak célszerű, akik adminisztrációval '
                           'nem foglalkoznak, viszont felhasználóként releváns információkat '
                           'tudhatnak meg az általuk üzemeltetett eszközökről. (pl. érvényesség).',

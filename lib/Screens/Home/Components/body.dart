@@ -19,7 +19,6 @@ class Body extends StatelessWidget {
       throw 'Could not launch $url';
     }
   }
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -44,6 +43,7 @@ class Body extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       InkWell(
+
                         onTap: () {
                           return locator<NavigationService>().navigateTo('contract');
                         },

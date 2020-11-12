@@ -49,23 +49,25 @@ class Grid extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    ParagrapRow(size: size),
+                    SizedBox(height: size.height*0.022,),
+                    ParagrapRow(size: size, count: count,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
+                        SizedBox(height: size.height*0.035,),
                         Text(
                           '1993. évi XCIII. törvény a munkavédelemről:',
-                          style: TextStyle(color: Colors.white70, fontSize: 19),
+                          style: TextStyle(color: Colors.white70, fontSize: 18),
                         ),
                         SizedBox(
                           height: 8,
                         ),
                         Text(
-                          '- meghatározza az egészséget'
+                          '•   meghatározza az egészséget'
                           ' nem veszélyeztető és biztonságos munkavégzés személyi, tárgyi és szervezeti feltételeit. ',
                           style: TextStyle(color: Colors.white70, fontSize: 15),
                         ),
@@ -83,23 +85,25 @@ class Grid extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    ParagrapRow(size: size),
+                    SizedBox(height: size.height*0.022,),
+                    ParagrapRow(size: size, count: count,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
+                        SizedBox(height: size.height*0.035,),
                         Text(
                           '7/1999. (VIII. 4.) GM rendelet: ',
-                          style: TextStyle(color: Colors.white70, fontSize: 19),
+                          style: TextStyle(color: Colors.white70, fontSize: 18),
                         ),
                         SizedBox(
                           height: 8,
                         ),
                         Text(
-                          '- emelőgépekre, teherfelvevő eszközökre a munkavédelmi törvény szélesebbkörű értelmezését adja '
+                          '•   emelőgépekre, teherfelvevő eszközökre a munkavédelmi törvény szélesebbkörű értelmezését adja '
                           'az Emelőgép Biztonsági Szabályzat (továbbiakban EBSZ).',
                           style: TextStyle(color: Colors.white70, fontSize: 15),
                         ),
@@ -117,23 +121,25 @@ class Grid extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    ParagrapRow(size: size),
+                    SizedBox(height: size.height*0.022,),
+                    ParagrapRow(size: size, count: count,),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
+
                       children: [
+                        SizedBox(height: size.height*0.035,),
                         Text(
                           'Emelőgép Biztonsági Szabályzat: ',
-                          style: TextStyle(color: Colors.white70, fontSize: 19),
+                          style: TextStyle(color: Colors.white70, fontSize: 18),
                         ),
                         SizedBox(
                           height: 8,
                         ),
                         Text(
-                          '- az EBSZ részletesen szabályozza az eszközök tulajdonosának, '
+                          '•   az EBSZ részletesen szabályozza az eszközök tulajdonosának, '
                           'üzemeltetőjének feladatait és a használat módjait',
                           style: TextStyle(color: Colors.white70, fontSize: 15),
                         ),
@@ -151,52 +157,54 @@ class Grid extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    ParagrapRow(size: size),
+                    SizedBox(height: size.height*0.022,),
+                    ParagrapRow(size: size, count: count,),
                     Container(
-                      height: size.height * 0.25,
+                      height: size.width*0.56/count,
                       child: SingleChildScrollView(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
+
                           children: [
+                            SizedBox(height: size.height*0.035,),
                             Text(
                               'Az emelőgép üzemeltetője köteles:',
                               style: TextStyle(
-                                  color: Colors.white70, fontSize: 19),
+                                  color: Colors.white70, fontSize: 18),
                             ),
                             SizedBox(
-                              height: 8,
+                              height: 12,
                             ),
                             Text(
-                              '1. az emelőgép, üzembehelyezéséről,',
+                              '•   az emelőgép, üzembehelyezéséről,',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
                             ),
                             Text(
-                              '2. a teherfüggesztő eszközök használatba vételéről,',
+                              '•   a teherfüggesztő eszközök használatba vételéről,',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
                             ),
                             Text(
-                              '3. rendeltetésszerű használatáról,',
+                              '•   rendeltetésszerű használatáról,',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
                             ),
                             Text(
-                              '4. biztonságos állapotának megőrzéséről,',
+                              '•   biztonságos állapotának megőrzéséről,',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
                             ),
                             Text(
-                              '5. az időszakos vizsgálatról és',
+                              '•   az időszakos vizsgálatról és',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
                             ),
                             Text(
-                              '6. a karbantartás szakszerű és rendszeres elvégzéséről'
+                              '•   a karbantartás szakszerű és rendszeres elvégzéséről '
                               'gondoskodni.',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
@@ -217,42 +225,44 @@ class Grid extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    ParagrapRow(size: size),
+                    SizedBox(height: size.height*0.022,),
+                    ParagrapRow(size: size, count: count,),
                     Container(
-                      height: size.height * 0.25,
+                      height: size.width*0.56/count,
                       child: SingleChildScrollView(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
+
                           children: [
+                            SizedBox(height: size.height*0.035,),
                             Text(
                               'Az emelőgépek üzemeltetésével kapcsolatos feladatok tehát az alábbi területekre irányulnak:',
                               style: TextStyle(
-                                  color: Colors.white70, fontSize: 19),
+                                  color: Colors.white70, fontSize: 18),
                             ),
                             SizedBox(
                               height: 8,
                             ),
                             Text(
-                              '1. Üzembehelyezés',
+                              '•   Üzembehelyezés',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
                             ),
                             Text(
-                              '2. Időszakos vizsgálatok',
+                              '•   Időszakos vizsgálatok',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
                             ),
                             Text(
-                              '3. Karbantartások',
+                              '•   Karbantartások',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
                             ),
                             Text(
-                              '4. Javítások',
+                              '•   Javítások',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
                             ),
@@ -272,42 +282,44 @@ class Grid extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    ParagrapRow(size: size),
+                    SizedBox(height: size.height*0.022,),
+                    ParagrapRow(size: size, count: count,),
                     Container(
-                      height: size.height * 0.25,
+                      height: size.width*0.56/count,
                       child: SingleChildScrollView(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
+
                           children: [
+                            SizedBox(height: size.height*0.035,),
                             Text(
                               'Az alábbi előírások különösen fontosak:',
                               style: TextStyle(
-                                  color: Colors.white70, fontSize: 19),
+                                  color: Colors.white70, fontSize: 18),
                             ),
                             SizedBox(
                               height: 8,
                             ),
                             Text(
-                              '- 1993. évi XCIII. törvény a munkavédelemről ',
+                              '•   1993. évi XCIII. törvény a munkavédelemről ',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
                             ),
                             Text(
-                              '- 7/1999. (VIII. 4.) GM rendelet',
+                              '•   7/1999. (VIII. 4.) GM rendelet',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
                             ),
                             Text(
-                              '- MSZ 6721-1:2011 jelű szabvány az üzembehelyezéshez',
+                              '•   MSZ 6721-1:2011 jelű szabvány az üzembehelyezéshez',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
                             ),
                             Text(
-                              '- MSZ 9721-1:2018 jelű szabvány a vizsgálatokhoz',
+                              '•   MSZ 9721-1:2018 jelű szabvány a vizsgálatokhoz',
                               style: TextStyle(
                                   color: Colors.white70, fontSize: 15),
                             ),
@@ -329,10 +341,11 @@ class Grid extends StatelessWidget {
 class ParagrapRow extends StatelessWidget {
   const ParagrapRow({
     Key key,
-    @required this.size,
+    @required this.size, this.count,
   }) : super(key: key);
 
   final Size size;
+  final int count;
 
   @override
   Widget build(BuildContext context) {
@@ -340,8 +353,8 @@ class ParagrapRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          width: size.width * 0.2,
-          height: size.width * 0.05,
+          width: size.width * 0.66/count,
+          height: size.width * 0.15/count,
           decoration: BoxDecoration(
             shape: BoxShape.rectangle,
             image: DecorationImage(
