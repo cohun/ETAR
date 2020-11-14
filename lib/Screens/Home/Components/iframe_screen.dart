@@ -19,7 +19,11 @@ class _IframeScreenState extends State<IframeScreen> {
   final _textController = TextEditingController();
 
   List<String> _videos = ['https://www.youtube.com/embed/bbPvddL2L7Q',
-    "https://www.youtube.com/embed/Bm1o_RgD3LA",
+    "https://www.youtube.com/embed/Bm1o_RgD3LA", "https://www.youtube.com/embed/Ns-ZD-nz9mg",
+    "https://www.youtube.com/embed/B4-IlnF-Lko", "https://www.youtube.com/embed/Kpp1k_W_kUM",
+    "https://www.youtube.com/embed/YnvTp238dWw",
+    "https://www.youtube.com/embed/xYYXtqBWJsc", "https://www.youtube.com/embed/ZYyLHUQ4eJo",
+
   ];
   var i = 0;
 
@@ -68,35 +72,123 @@ class _IframeScreenState extends State<IframeScreen> {
               padding: const EdgeInsets.only(top: 80),
               child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 2.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Icon(
+                            Icons.double_arrow_sharp,
+                            size: 20,
+                            color: Colors.white60,
+                          ),
 
-                      TextButton.icon(
-                        style: TextButton.styleFrom(
-                          side: BorderSide(color: i == 0 ? crimson : Colors.blueGrey[900], width: 2),
-                        ),
-                        icon: Icon(Icons.play_arrow_outlined),
-                        label: Text('ETAR Intro'),
-                        onPressed: () {
-                          i = 0;
-                          return _newVideo(0);
-                        },
+                          TextButton.icon(
+                            style: TextButton.styleFrom(
+                              side: BorderSide(color: i == 0 ? crimson : Colors.blueGrey[900], width: 2),
+                            ),
+                            icon: Icon(Icons.play_arrow_outlined),
+                            label: Text('ETAR Intro'),
+                            onPressed: () {
+                              i = 0;
+                              return _newVideo(0);
+                            },
+                          ),
+
+                          TextButton.icon(
+                            style: TextButton.styleFrom(
+                              side: BorderSide(color: i == 1 ? crimson : Colors.blueGrey[900], width: 2),
+                            ),
+                            icon: Icon(Icons.play_arrow_outlined),
+                            label: Text('ETAR kód kérés'),
+                            onPressed: () {
+                              i = 1;
+                              return _newVideo(1);
+                            },
+                          ),
+
+                          TextButton.icon(
+                            style: TextButton.styleFrom(
+                              side: BorderSide(color: i == 2 ? crimson : Colors.blueGrey[900], width: 2),
+                            ),
+                            icon: Icon(Icons.play_arrow_outlined),
+                            label: Text('Belépés ETAR kóddal'),
+                            onPressed: () {
+                              i = 2;
+                              return _newVideo(2);
+                            },
+                          ),
+
+                          TextButton.icon(
+                            style: TextButton.styleFrom(
+                              side: BorderSide(color: i == 3 ? crimson : Colors.blueGrey[900], width: 2),
+                            ),
+                            icon: Icon(Icons.play_arrow_outlined),
+                            label: Text('Üzemeltetők megadása'),
+                            onPressed: () {
+                              i = 3;
+                              return _newVideo(3);
+                            },
+                          ),
+
+                          TextButton.icon(
+                            style: TextButton.styleFrom(
+                              side: BorderSide(color: i == 4 ? crimson : Colors.blueGrey[900], width: 2),
+                            ),
+                            icon: Icon(Icons.play_arrow_outlined),
+                            label: Text('Termék felvitel'),
+                            onPressed: () {
+                              i = 4;
+                              return _newVideo(4);
+                            },
+                          ),
+
+                          TextButton.icon(
+                            style: TextButton.styleFrom(
+                              side: BorderSide(color: i == 5 ? crimson : Colors.blueGrey[900], width: 2),
+                            ),
+                            icon: Icon(Icons.play_arrow_outlined),
+                            label: Text('Üzembehelyezés'),
+                            onPressed: () {
+                              i = 5;
+                              return _newVideo(5);
+                            },
+                          ),
+
+                          TextButton.icon(
+                            style: TextButton.styleFrom(
+                              side: BorderSide(color: i == 6 ? crimson : Colors.blueGrey[900], width: 2),
+                            ),
+                            icon: Icon(Icons.play_arrow_outlined),
+                            label: Text('NFC betanítás'),
+                            onPressed: () {
+                              i = 6;
+                              return _newVideo(6);
+                            },
+                          ),
+
+                          TextButton.icon(
+                            style: TextButton.styleFrom(
+                              side: BorderSide(color: i == 7 ? crimson : Colors.blueGrey[900], width: 2),
+                            ),
+                            icon: Icon(Icons.play_arrow_outlined),
+                            label: Text('NFC keresés'),
+                            onPressed: () {
+                              i = 7;
+                              return _newVideo(7);
+                            },
+                          ),
+
+                          Icon(
+                            Icons.double_arrow_sharp,
+                            size: 20,
+                            color: Colors.white60,
+                          ),
+                        ],
                       ),
-
-                      TextButton.icon(
-                        style: TextButton.styleFrom(
-                          side: BorderSide(color: i == 1 ? crimson : Colors.blueGrey[900], width: 2),
-                        ),
-                        icon: Icon(Icons.play_arrow_outlined),
-                        label: Text('ETAR kód kérés'),
-                        onPressed: () {
-                          i = 1;
-                          return _newVideo(1);
-                        },
-                      ),
-
-                    ],
+                    ),
                   ),
                   SizedBox(
                     height: _height,
