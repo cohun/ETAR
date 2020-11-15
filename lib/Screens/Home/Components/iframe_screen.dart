@@ -23,7 +23,8 @@ class _IframeScreenState extends State<IframeScreen> {
     "https://www.youtube.com/embed/B4-IlnF-Lko", "https://www.youtube.com/embed/Kpp1k_W_kUM",
     "https://www.youtube.com/embed/YnvTp238dWw",
     "https://www.youtube.com/embed/xYYXtqBWJsc", "https://www.youtube.com/embed/ZYyLHUQ4eJo",
-
+    "https://www.youtube.com/embed/ByF4krUhj5Y", "https://www.youtube.com/embed/Q7qs19sy9qQ",
+    "https://www.youtube.com/embed/KqMJzj7kntg",
   ];
   var i = 0;
 
@@ -178,6 +179,42 @@ class _IframeScreenState extends State<IframeScreen> {
                             onPressed: () {
                               i = 7;
                               return _newVideo(7);
+                            },
+                          ),
+
+                          TextButton.icon(
+                            style: TextButton.styleFrom(
+                              side: BorderSide(color: i == 8 ? crimson : Colors.blueGrey[900], width: 2),
+                            ),
+                            icon: Icon(Icons.play_arrow_outlined),
+                            label: Text('Gyáriszám keresés'),
+                            onPressed: () {
+                              i = 8;
+                              return _newVideo(8);
+                            },
+                          ),
+
+                          TextButton.icon(
+                            style: TextButton.styleFrom(
+                              side: BorderSide(color: i == 9 ? crimson : Colors.blueGrey[900], width: 2),
+                            ),
+                            icon: Icon(Icons.play_arrow_outlined),
+                            label: Text('Listázás'),
+                            onPressed: () {
+                              i = 9;
+                              return _newVideo(9);
+                            },
+                          ),
+
+                          TextButton.icon(
+                            style: TextButton.styleFrom(
+                              side: BorderSide(color: i == 10 ? crimson : Colors.blueGrey[900], width: 2),
+                            ),
+                            icon: Icon(Icons.play_arrow_outlined),
+                            label: Text('Excel export'),
+                            onPressed: () {
+                              i = 10;
+                              return _newVideo(10);
                             },
                           ),
 
