@@ -48,7 +48,7 @@ Felhasználási Feltételekben megadottakkal, mely elérhető az ETAR
 alkalmazáson belül, hacsak ez az irányelv erről másképp nem
 rendelkezik.*
 
-<span id="_Hlk55999845" class="anchor"></span>2. **Információgyűjtés és
+ **Információgyűjtés és
 -felhasználás**\
 \
 A szolgáltatás nyújtásakor, jobb felhasználói élmény érdekében kérhetünk

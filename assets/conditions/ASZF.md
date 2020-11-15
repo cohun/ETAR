@@ -19,7 +19,7 @@ Szolgáltató)*
 
 *Weboldal: www.etar.app*
 
-*1**. Bevezető rendelkezések***
+***1. Bevezető rendelkezések***
 
 *1.1 A jelen Általános Szerződési Feltételek (a továbbiakban: ÁSZF) a
 Polgári Törvénykönyvről szóló 2013. évi V. törvény (a továbbiakban:
@@ -52,11 +52,11 @@ kapcsolódó események dokumentálását tudják elvégezni.*
 ÁSZF-ben foglaltakat elfogadja, valamint a kapcsolódó Adatvédelmi
 Tájékoztatóban foglaltakat vele közlik.*
 
-*Az Általános Szerződési Feltételek itt érhető el**:
-[www.etar.app](http://www.etar.app) + ETAR iconra kattintva***
+*Az Általános Szerződési Feltételek itt érhető el*:
+[www.etar.app](http://www.etar.app) + **ETAR iconra kattintva**
 
-*Az Adatvédelmi tájékoztató itt érhető el**:
-[www.etar.app](http://www.etar.app) + ETAR iconra kattintva***
+*Az Adatvédelmi tájékoztató itt érhető el*:
+[www.etar.app](http://www.etar.app) + **ETAR iconra kattintva**
 
 *1.5 A Szolgáltató fenntartja a jogot, hogy a jelen ÁSZF-et belátása
 szerint egyoldalúan módosítsa vagy lecserélje azzal, hogy az aktuális
@@ -68,12 +68,12 @@ rendelkezéseket a Weboldalon közzéteszi.*
 életévét betöltött természetes személy**, aki magára nézve kötelezőnek
 fogadta el a jelen ÁSZF-et.*
 
-***Felhasználói Fiók:** jelenti azt a technikát, amellyel a Felhasználó
+**Felhasználói Fiók:** jelenti azt a technikát, amellyel a Felhasználó
 kapcsolódni tud az APP regisztráció köteles moduljaihoz. A Felhasználói
 Fiókhoz Felhasználó Név és Jelszó szükséges. A Felhasználói Fiók a
 rendszerben való hitelesítést szolgálja.*
 
-***Felhasználó Név és Jelszó:** A természetes személy Felhasználó által
+**Felhasználó Név és Jelszó:** A természetes személy Felhasználó által
 az APP-on keresztül megadott azonosítók, amelyek használatával a
 Mobiltelefonos Alkalmazás regisztráció köteles moduljai igénybe
 vehetők.*
@@ -368,7 +368,7 @@ Szolgáltató nem vállal felelősséget sem közvetlenül sem közvetve
 információvesztésekért, mely jelen szolgáltás kizárólagos használata
 esetén bekövetkezhetnek.*
 
-*7.2.12.* Szolgáltató *arra törekszik, hogy az applikáció a lehető
+*7.2.12. Szolgáltató arra törekszik, hogy az applikáció a lehető
 leghatékonyabb és leghasznosabb módon lássa el funkcióját. Ennek
 érdekében fenntartjuk a jogot, hogy a későbbiekben bármikor
 változtatásokat eszközöljünk vagy a szolgáltatásokat díjfizetéshez
