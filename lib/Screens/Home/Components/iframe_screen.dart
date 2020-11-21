@@ -24,7 +24,8 @@ class _IframeScreenState extends State<IframeScreen> {
     "https://www.youtube.com/embed/YnvTp238dWw",
     "https://www.youtube.com/embed/xYYXtqBWJsc", "https://www.youtube.com/embed/ZYyLHUQ4eJo",
     "https://www.youtube.com/embed/ByF4krUhj5Y", "https://www.youtube.com/embed/Q7qs19sy9qQ",
-    "https://www.youtube.com/embed/KqMJzj7kntg",
+    "https://www.youtube.com/embed/KqMJzj7kntg", "https://www.youtube.com/embed/A6yRPpCWmq4",
+    "https://www.youtube.com/embed/rbeSpcutHaY",
   ];
   var i = 0;
 
@@ -215,6 +216,30 @@ class _IframeScreenState extends State<IframeScreen> {
                             onPressed: () {
                               i = 10;
                               return _newVideo(10);
+                            },
+                          ),
+
+                          TextButton.icon(
+                            style: TextButton.styleFrom(
+                              side: BorderSide(color: i == 11 ? crimson : Colors.blueGrey[900], width: 2),
+                            ),
+                            icon: Icon(Icons.play_arrow_outlined),
+                            label: Text('Termék adatmódosítás'),
+                            onPressed: () {
+                              i = 11;
+                              return _newVideo(11);
+                            },
+                          ),
+
+                          TextButton.icon(
+                            style: TextButton.styleFrom(
+                              side: BorderSide(color: i == 12 ? crimson : Colors.blueGrey[900], width: 2),
+                            ),
+                            icon: Icon(Icons.play_arrow_outlined),
+                            label: Text('Termék törlése'),
+                            onPressed: () {
+                              i = 12;
+                              return _newVideo(12);
                             },
                           ),
 

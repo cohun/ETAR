@@ -154,7 +154,7 @@ class ContractScreen extends StatelessWidget {
                         showDialog(
                             context: context,
                             builder: (context) {
-                              return PolicyDialog(mdFileName: 'aszf.md');
+                              return PolicyDialog(mdFileName: 'ASZF.md');
                             });
                       },
                     ),

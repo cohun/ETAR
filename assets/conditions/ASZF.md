@@ -1,4 +1,4 @@
-*Átalános Szerződési Feltételek*
+\*Átalános Szerződési Feltételek*
 
 ***ETAR APPLIKÁCIÓ IGÉNYBEVÉTELÉNEK ÁLTALÁNOS SZERZŐDÉSI FELTÉTELEI***
 
@@ -375,3 +375,4 @@ változtatásokat eszközöljünk vagy a szolgáltatásokat díjfizetéshez
 kössük. Azonban az applikáció szolgáltatásaiért soha sem fogunk anélkül
 díjat kérni, hogy ne közölnénk pontosan, hogy mire történik a
 díjfizetés. *
+\
