@@ -142,4 +142,4 @@ Tanácsoljuk rendszeresen tekintsen rá, hogy értesülhessen a
 változásokról. Minden változtatásról értesíteni fogjuk az
 alkalmazásban.\
 \
-A mostani kiadás 2020-12-01 óta hatályos
+A mostani kiadás 2021-01-01 óta hatályos
