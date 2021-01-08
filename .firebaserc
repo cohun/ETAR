@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "etar-app"
+  },
+  "targets": {
+    "etar-app": {
+      "hosting": {
+        "etar-app": [
+          "etar-app"
+        ]
+      }
+    }
   }
 }

@@ -26,10 +26,12 @@ class ContractScreen extends StatelessWidget {
           'Használat feltételei',
           style: TextStyle(color: Colors.white),
         ),
-        actions: [IconButton(
-          icon: Icon(Icons.login),
-          onPressed: _launchURL,
-        )],
+        actions: [
+          IconButton(
+            icon: Icon(Icons.login),
+            onPressed: _launchURL,
+          )
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
@@ -63,33 +65,43 @@ class ContractScreen extends StatelessWidget {
                       ),
                       Text(
                         '•   A használat megkezdéséhez szerződés megkötése szükséges a Szolgáltatóval.',
-                        style:
-                        TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
+                        style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w200,
+                            letterSpacing: 1.1),
                       ),
                       Text(
-                          '•   Szerződéskötéskor üzemeltető cég kijelöli azon munkatársát, aki '
-                          'a cégen belüli felvételeket és jogosultságokat kezelni fogja.',
-                        style:
-                        TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
+                        '•   Szerződéskötéskor üzemeltető cég kijelöli azon munkatársát, aki '
+                        'a cégen belüli felvételeket és jogosultságokat kezelni fogja.',
+                        style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w200,
+                            letterSpacing: 1.1),
                       ),
                       Text(
-                          '•   A jogosultság kezelő, miután létrehozza saját felhasználói fiókját, '
-                          'a cégnév és saját nevének megadásával a programon belül kezdeményezi a '
-                          'cég egyedi azonosítójának - az ETAR kódnak - a kiadását',
-                        style:
-                        TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
+                        '•   A jogosultság kezelő, miután létrehozza saját felhasználói fiókját, '
+                        'a cégnév és saját nevének megadásával a programon belül kezdeményezi a '
+                        'cég egyedi azonosítójának - az ETAR kódnak - a kiadását',
+                        style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w200,
+                            letterSpacing: 1.1),
                       ),
                       Text(
-                          '•   Ezt követően szolgáltató a megkötött szerződés alapján érvényesíti az ETAR kódot.',
-                        style:
-                        TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
+                        '•   Ezt követően szolgáltató a megkötött szerződés alapján érvényesíti az ETAR kódot.',
+                        style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w200,
+                            letterSpacing: 1.1),
                       ),
                       Text(
-                          '•   Innentől kezdve az érvényes ETAR kóddal rendelkező cég élvezheti '
-                          'a rendszer teljes funkcionalitását és a jogosultság kezelő, saját '
-                          'hatáskörben további felhasználókat vehet fel ill. jogosultságukat kezelheti.',
-                        style:
-                        TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
+                        '•   Innentől kezdve az érvényes ETAR kóddal rendelkező cég élvezheti '
+                        'a rendszer teljes funkcionalitását és a jogosultság kezelő, saját '
+                        'hatáskörben további felhasználókat vehet fel ill. jogosultságukat kezelheti.',
+                        style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w200,
+                            letterSpacing: 1.1),
                       ),
                     ],
                   ),
@@ -110,36 +122,41 @@ class ContractScreen extends StatelessWidget {
                       Center(
                         child: Text(
                           'Felhasználók felvétele az ETAR rendszerbe:',
-                          style:
-                              TextStyle(
-                                  fontSize: 32.0,
-                                  color: Colors.white70,
-                                  fontWeight: FontWeight.w300),
+                          style: TextStyle(
+                              fontSize: 32.0,
+                              color: Colors.white70,
+                              fontWeight: FontWeight.w300),
                         ),
                       ),
                       SizedBox(
                         height: 20,
                       ),
                       Text(
-                          '•   Új felhasználó, miután letöltötte az applikációt és létrehozta saját felhasználói '
-                          'fiókját a rendelkezésére bocsájtott ETAR kóddal kezdeményezheti felvételét '
-                          'az ETAR rendszerbe.',
-                          style:
-                          TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
+                        '•   Új felhasználó, miután letöltötte az applikációt és létrehozta saját felhasználói '
+                        'fiókját a rendelkezésére bocsájtott ETAR kóddal kezdeményezheti felvételét '
+                        'az ETAR rendszerbe.',
+                        style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w200,
+                            letterSpacing: 1.1),
                       ),
                       Text(
-                          '•   A cég jogosultság kezelője bírálja el a felvételi kérelmet és '
-                          'dönti el milyen jogosultsággal rendelkezzen az új felhasználó.',
-                        style:
-                        TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
+                        '•   A cég jogosultság kezelője bírálja el a felvételi kérelmet és '
+                        'dönti el milyen jogosultsággal rendelkezzen az új felhasználó.',
+                        style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w200,
+                            letterSpacing: 1.1),
                       ),
                       Text(
-                          '•   Alapvetően irási jogosultság és olvasási jogosultság szerezhető meg. '
-                          'Az olvasási jogosultság olyan felhasználóknak célszerű, akik adminisztrációval '
-                          'nem foglalkoznak, viszont felhasználóként releváns információkat '
-                          'tudhatnak meg az általuk üzemeltetett eszközökről. (pl. érvényesség).',
-                        style:
-                        TextStyle(color: Colors.white70, fontWeight: FontWeight.w200, letterSpacing: 1.1),
+                        '•   Alapvetően irási jogosultság és olvasási jogosultság szerezhető meg. '
+                        'Az olvasási jogosultság olyan felhasználóknak célszerű, akik adminisztrációval '
+                        'nem foglalkoznak, viszont felhasználóként releváns információkat '
+                        'tudhatnak meg az általuk üzemeltetett eszközökről. (pl. érvényesség).',
+                        style: TextStyle(
+                            color: Colors.white70,
+                            fontWeight: FontWeight.w200,
+                            letterSpacing: 1.1),
                       ),
                     ],
                   ),
@@ -168,7 +185,7 @@ class ContractScreen extends StatelessWidget {
                         showDialog(
                             context: context,
                             builder: (context) {
-                              return PolicyDialog(mdFileName: 'ASZF.md');
+                              return PolicyDialog(mdFileName: 'Aszf.md');
                             });
                       },
                     ),
