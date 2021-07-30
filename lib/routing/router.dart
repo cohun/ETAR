@@ -4,6 +4,7 @@ import 'package:etar_app/Screens/Home/Components/iframe_screen.dart';
 import 'package:etar_app/Screens/Home/etarApp/etarApp_screen.dart';
 import 'package:etar_app/Screens/Home/home_screen.dart';
 import 'package:etar_app/Screens/Home/inspection/inspection_screen.dart';
+import 'package:etar_app/Screens/Home/landing_screen.dart';
 import 'package:etar_app/Screens/Home/law/law_screen.dart';
 import 'package:etar_app/Screens/Home/maintenance/maintenance_screen.dart';
 import 'package:etar_app/Screens/Home/opStart/opStart_screen.dart';
@@ -14,6 +15,8 @@ import 'package:flutter/widgets.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
+    case LandingRoute:
+      return _getPageRoute(LandingScreen());
     case HomeRoute:
       return _getPageRoute(HomeScreen());
     case OpStart:
