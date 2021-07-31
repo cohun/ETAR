@@ -9,7 +9,7 @@ class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(18),
+      padding: EdgeInsets.all(4),
       color: Colors.blueGrey[900],
       child: Column(
         children: [

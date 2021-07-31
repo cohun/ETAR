@@ -26,7 +26,7 @@ class LandingMobile extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           child: Column(
             children: [
               Row(
@@ -38,7 +38,7 @@ class LandingMobile extends StatelessWidget {
                       Text(
                         'Emelőgépek Üzemvitele',
                         style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
                             foreground: Paint()..shader = iphoneShader,
                             shadows: [
@@ -83,7 +83,7 @@ class LandingMobile extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 30),
               Row(
                 children: [
                   InkWell(
@@ -99,7 +99,7 @@ class LandingMobile extends StatelessWidget {
                     },
                   ),
                   SizedBox(
-                    width: 20,
+                    width: 15,
                   ),
                   Text(
                       "Elektronikus Termék Azonosító Rendszer."
@@ -112,7 +112,7 @@ class LandingMobile extends StatelessWidget {
                       )),
                 ],
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               Container(
                 width: 300,
                 child: Row(
@@ -199,17 +199,17 @@ class LandingMobile extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 15,
               ),
               Row(
                 children: [
                   Container(
-                    width: 100,
+                    width: 90,
                     child: Image.asset(
                       'assets/images/etar_en.png',
                     ),
                   ),
-              SizedBox(width: 6,),
+              SizedBox(width: 4,),
               Text(
                 "Emelőgépek biztonságos üzemeltetéséhez"
                 "\nszükséges adatok, feljegyzések,"
@@ -224,7 +224,7 @@ class LandingMobile extends StatelessWidget {
               ),
                 ],
               ),
-              SizedBox(height: 18),
+              SizedBox(height: 10),
               Container(
                 width: 300,
                 child: Row(
@@ -232,7 +232,7 @@ class LandingMobile extends StatelessWidget {
                     Image.asset('assets/images/LE_Doc.png',
                         width: 40, color: Color(0xff3095C3)),
                     SizedBox(
-                      width: 20,
+                      width: 10,
                     ),
                     Text(
                       'Üzemviteli dokumentum',
