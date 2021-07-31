@@ -43,11 +43,18 @@ class NavigationBarTablet extends StatelessWidget {
               onTap: () {return locator<NavigationService>().navigateTo('home');},
             ),
             Spacer(),
-           
+            MenuItem(
+              title: "Főoldal",
+              isHighlighted: count == 1 ? true : false,
+              fontSize: 10,
+              press: () {
+                return locator<NavigationService>().navigateTo('landing');
+              },
+            ),
             MenuItem(
               title: "Üzembehelyezés",
               isHighlighted: count == 1 ? true : false,
-              fontSize: 11,
+              fontSize: 10,
               press: () {
                 return locator<NavigationService>().navigateTo('opStart');
               },
@@ -55,7 +62,7 @@ class NavigationBarTablet extends StatelessWidget {
             MenuItem(
               title: "Vizsgálatok",
               isHighlighted: count == 2 ? true : false,
-              fontSize: 11,
+              fontSize: 10,
               press: () {
                 return locator<NavigationService>().navigateTo('inspection');
               },
@@ -63,7 +70,7 @@ class NavigationBarTablet extends StatelessWidget {
             MenuItem(
               title: "Karbantartás",
               isHighlighted: count == 3 ? true : false,
-              fontSize: 11,
+              fontSize: 10,
               press: () {
                 return locator<NavigationService>().navigateTo('maintenance');
               },
@@ -71,7 +78,7 @@ class NavigationBarTablet extends StatelessWidget {
             MenuItem(
               title: "Javítás",
               isHighlighted: count == 4 ? true : false,
-              fontSize: 11,
+              fontSize: 10,
               press: () {
                 return locator<NavigationService>().navigateTo('repair');
               },
