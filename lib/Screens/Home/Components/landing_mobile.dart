@@ -73,11 +73,17 @@ class LandingMobile extends StatelessWidget {
                         },
                       ),
                       SizedBox(width: 10),
-                      Container(
-                        width: 40,
-                        child: Image.asset(
-                          'assets/images/etar_en.png',
+                      InkWell(
+                        child: Container(
+                          width: 40,
+                          child: Image.asset(
+                            'assets/images/etar_en.png',
+                          ),
                         ),
+                        onTap: () {
+                          return locator<NavigationService>()
+                              .navigateTo('enHome');
+                        },
                       ),
                     ],
                   )

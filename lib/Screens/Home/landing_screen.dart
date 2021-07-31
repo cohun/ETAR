@@ -77,10 +77,16 @@ class LandingScreen extends StatelessWidget {
                             },
                           ),
                           SizedBox(width: 40),
-                          Container(
-                            width: 50,
-                            child: Image.asset('assets/images/etar_en.png',
+                          InkWell(
+                            child: Container(
+                              width: 50,
+                              child: Image.asset('assets/images/etar_en.png',
+                              ),
                             ),
+                            onTap: () {
+                              return locator<NavigationService>()
+                                  .navigateTo('enHome');
+                            },
                           ),
                         ],
                       )
@@ -220,10 +226,16 @@ class LandingScreen extends StatelessWidget {
                           SizedBox(height: 60,),
                           Row(
                             children: [
-                              Container(
-                                width: size.width > 1150 ? 200 : size.width > 900 ? 160: 130,
-                                child: Image.asset('assets/images/etar_en.png',
+                              InkWell(
+                                child: Container(
+                                  width: size.width > 1150 ? 200 : size.width > 900 ? 160: 130,
+                                  child: Image.asset('assets/images/etar_en.png',
+                                  ),
                                 ),
+                                onTap: () {
+                                  return locator<NavigationService>()
+                                      .navigateTo('enHome');
+                                },
                               ),
                               SizedBox(width: size.width > 1400 ? size.width*0.05 : size.width*0.001,),
                               Text("Főbb műszaki jellemzők"

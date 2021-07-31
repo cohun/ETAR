@@ -1,5 +1,6 @@
 const String LandingRoute = 'landing';
 const String HomeRoute = 'home';
+const String EnHomeRoute = 'enHome';
 const String OpStart = 'opStart';
 const String Inspection = 'inspection';
 const String Maintenance = 'maintenance';
