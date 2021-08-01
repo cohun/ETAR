@@ -1,28 +1,20 @@
 import 'package:etar_app/Components/default_button.dart';
 import 'package:etar_app/services/navigation_service.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-
 import '../../../locator.dart';
-import 'en_app_bar_mobile.dart';
-import 'en_app_bar_tablet.dart';
 import 'menu_item.dart';
 
-class EnAppBar extends StatelessWidget {
+class NavigationBarEnTablet extends StatelessWidget {
 
   final int count;
 
-  const EnAppBar({Key key, this.count}) : super(key: key);
+  const NavigationBarEnTablet({Key key, this.count}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      breakpoints: ScreenBreakpoints(desktop: 900, tablet: 680, watch: 200),
-      mobile: NavigationBarEnMobile(),
-      tablet: NavigationBarEnTablet(count: count,),
-      desktop: Container(
-        margin: EdgeInsets.all(10),
-        padding: EdgeInsets.all(20),
+      return Container(
+        margin: EdgeInsets.all(20),
+        padding: EdgeInsets.all(15),
         decoration: BoxDecoration(
           color: Color(0xFF092A45),
           borderRadius: BorderRadius.circular(46),
@@ -38,14 +30,14 @@ class EnAppBar extends StatelessWidget {
           children: <Widget>[
             Image.asset(
               "assets/images/etar_en.png",
-              height: 40,
+              height: 30,
               alignment: Alignment.topCenter,
             ),
             SizedBox(width: 5),
             InkWell(
               child: Text(
                 "Etar_en".toUpperCase(),
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
               ),
               onTap: () {
                 return locator<NavigationService>().navigateTo('home');
@@ -84,7 +76,6 @@ class EnAppBar extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }

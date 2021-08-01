@@ -8,10 +8,11 @@ class MenuItem extends StatelessWidget {
   final bool isHighlighted;
   final double fontSize;
   final Color color;
-  const MenuItem({
+  final bool small;
+   MenuItem({
     Key key,
     this.title,
-    this.press, this.fontSize, this.isHighlighted, this.color = kTextColor,
+    this.press, this.fontSize, this.isHighlighted, this.color = kTextColor, this.small = false,
   }) : super(key: key);
 
   @override
@@ -19,7 +20,7 @@ class MenuItem extends StatelessWidget {
     return InkWell(
       onTap: press,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
+        padding: EdgeInsets.symmetric(horizontal: small ? 5 : 15),
         child: Text(
           title.toUpperCase(),
           style: TextStyle(

@@ -1,12 +1,11 @@
 import 'package:etar_app/Screens/Home/Components/en_app_bar.dart';
+import 'package:etar_app/Screens/Home/Components/en_body_mobile.dart';
 import 'package:etar_app/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../constant.dart';
 import '../../locator.dart';
-import 'Components/landing_mobile.dart';
 
 class EnHomeScreen extends StatelessWidget {
   EnHomeScreen({Key key}) : super(key: key);
@@ -27,7 +26,7 @@ class EnHomeScreen extends StatelessWidget {
         ),
         Spacer(),
         // It will cover 1/3 of free spaces
-        body(size: size, iphoneShader: iphoneShader),
+        Body(size: size, iphoneShader: iphoneShader),
         Spacer(
           flex: 3,
         ),
@@ -37,8 +36,8 @@ class EnHomeScreen extends StatelessWidget {
   }
 }
 
-class body extends StatelessWidget {
-  const body({
+class Body extends StatelessWidget {
+  const Body({
     Key key,
     @required this.size,
     @required this.iphoneShader,
@@ -61,9 +60,9 @@ class body extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       breakpoints: ScreenBreakpoints(desktop: 750, tablet: 680, watch: 200),
-      mobile: LandingMobile(),
+      mobile: EnBodyMobile(),
       desktop: Container(
-        height: size.height - 150,
+        height: size.height - 130,
         decoration: BoxDecoration(
             gradient: LinearGradient(
                 begin: Alignment.topRight,
@@ -83,7 +82,7 @@ class body extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 50, top: 100),
+                  padding: const EdgeInsets.only(left: 50, top: 80),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -120,16 +119,29 @@ class body extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        height: 50,
+                        height: 40,
                       ),
                       Container(
-                        width: size.width * 0.35,
+                        width: size.width * 0.45,
                         child: Text(
-                          "Elektronikus Termék Azonosító Rendszer: \nÜzemeltetői feladatok szakszerű ellátása, "
-                          "\naz Emelőgép Biztonsági Szabályzat előírásai szerint.",
+                          "Az ETAR_EN mobil applikáció az ETAR rendszerre épülve lehetővé teszi,"
+                              "\naz emelőgépekhez előírt dokumentációk és napló bejegyzések naprakész"
+                              "\nvezetését, megörzését és a bejegyzésre jogosultak körének szabályozását.",
                           style: TextStyle(
-                            fontSize: 21,
-                            color: Colors.white60,
+                            fontSize: size.width > 1770 ? 24 : size.width > 1450 ? 19 : size.width > 1180 ? 16 : size.width > 900 ? 11 :10,
+
+                              fontWeight: FontWeight.bold,
+                              foreground: Paint()..shader = iphoneShader,
+                              shadows: [
+                                Shadow(
+                                    offset: Offset(10, 10),
+                                    blurRadius: 20,
+                                    color: Colors.black),
+                                Shadow(
+                                    offset: Offset(10, 10),
+                                    blurRadius: 20,
+                                    color: Colors.black12),
+                              ]
                           ),
                         ),
                       ),
@@ -199,12 +211,12 @@ class body extends StatelessWidget {
                 ),
                 Spacer(),
                 Padding(
-                  padding: const EdgeInsets.only(top: 100.0),
+                  padding: const EdgeInsets.only(top: 80.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        width: size.width * 0.57,
+                        width: size.width * 0.45,
                         alignment: Alignment.topRight,
                         constraints: BoxConstraints(maxWidth: 700),
                         child: Row(
@@ -303,6 +315,32 @@ class body extends StatelessWidget {
                               },
                             ),
                           ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 12.0, bottom: 73),
+                        child: Card(
+                            color: Color(0xff3095C3),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: size.width > 1250 ?
+                            Text('Az emelőgép üzembe helyezésekor emelőgépenként, egyedileg kezelhető kísérődokumentációkat'
+                                '\nkell felfektetni, amely tartalmazza az emelőgép azonosító adatait, főbb műszaki jellemzőit, az'
+                                '\nüzemvitellel kapcsolatos adatokat, valamint alkalmas az időszakos vizsgálatok, '
+                                '\na javítások, a fődarabcserék és működési idő (üzemóra) nyilvántartására ',
+                              style: TextStyle(
+                                fontSize: size.width > 1600 ? 16 : 13,
+                              ),)
+                            : Text('Az emelőgép üzembe helyezésekor emelőgépenként,'
+                                '\negyedileg kezelhető kísérődokumentációkat kell felfektetni,'
+                                '\namely tartalmazza az emelőgép azonosító adatait, főbb műszaki'
+                                '\n jellemzőit, az üzemvitellel kapcsolatos adatokat, valamint'
+                                '\n alkalmas az időszakos vizsgálatok, javítások, a fődarabcserék'
+                              '\n és működési idő (üzemóra) nyilvántartására',
+                              style: TextStyle(
+                                fontSize: size.width > 941 ? 12 : 10,
+                              ),),
+                          ),
                         ),
                       ),
                       Container(
