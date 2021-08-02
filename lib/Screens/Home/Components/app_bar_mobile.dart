@@ -28,6 +28,15 @@ class NavigationBarMobile extends StatelessWidget {
           ),
           Spacer(),
           DefaultButton(
+            text: "Főoldal",
+            press: () {
+              return locator<NavigationService>().navigateTo('landing');
+            },
+          ),
+          SizedBox(
+            width: 20,
+          ),
+          DefaultButton(
             text: "ETAR app",
             press: () {
               return locator<NavigationService>().navigateTo('etarApp');

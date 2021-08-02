@@ -56,7 +56,7 @@ class CustomAppBar extends StatelessWidget {
               title: "Főoldal",
               isHighlighted: count == 0 ? true : false,
               press: () {
-                return locator<NavigationService>().navigateTo('home');
+                return locator<NavigationService>().navigateTo('landing');
               },
             ),
             MenuItem(

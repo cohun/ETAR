@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "target": "etar-app",
     "public": "build/web",
     "ignore": [
       "firebase.json",

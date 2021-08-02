@@ -21,7 +21,7 @@ class EtarAppMobile extends StatelessWidget {
         title: Text("$title:"),
         content: Text("$text"),
         actions: <Widget>[
-          FlatButton(
+          TextButton(
             child: Text('Bezár!'),
             onPressed: () {
               return Navigator.of(context, rootNavigator: true).pop();
@@ -53,7 +53,7 @@ class EtarAppMobile extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     InkWell(
-                      onTap: () {return locator<NavigationService>().navigateTo('contract');},
+                      onTap: () {return locator<NavigationService>().navigateTo('home');},
                       child: Container(
                         width: size.width * 0.2,
                         child: Image.asset("assets/images/Etar.png"),
@@ -74,7 +74,7 @@ class EtarAppMobile extends StatelessWidget {
               Container(
                 width: size.width,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40),
+                  padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 32),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

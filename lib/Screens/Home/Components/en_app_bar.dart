@@ -1,23 +1,30 @@
 import 'package:etar_app/Components/default_button.dart';
 import 'package:etar_app/services/navigation_service.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../locator.dart';
+import 'en_app_bar_mobile.dart';
+import 'en_app_bar_tablet.dart';
 import 'menu_item.dart';
 
-class NavigationBarTablet extends StatelessWidget {
+class EnAppBar extends StatelessWidget {
 
   final int count;
 
-  const NavigationBarTablet({Key key, this.count}) : super(key: key);
+  const EnAppBar({Key key, this.count}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        margin: EdgeInsets.symmetric(vertical: 20, horizontal: 12),
-        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 12),
+    return ScreenTypeLayout(
+      breakpoints: ScreenBreakpoints(desktop: 900, tablet: 680, watch: 200),
+      mobile: NavigationBarEnMobile(),
+      tablet: NavigationBarEnTablet(count: count,),
+      desktop: Container(
+        margin: EdgeInsets.all(10),
+        padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Color(0xFF092A45),
           borderRadius: BorderRadius.circular(46),
           boxShadow: [
             BoxShadow(
@@ -30,67 +37,54 @@ class NavigationBarTablet extends StatelessWidget {
         child: Row(
           children: <Widget>[
             Image.asset(
-              "assets/images/ETAR_ICON.png",
-              height: 25,
+              "assets/images/etar_en.png",
+              height: 40,
               alignment: Alignment.topCenter,
             ),
             SizedBox(width: 5),
             InkWell(
               child: Text(
-                "Etar".toUpperCase(),
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,),
+                "Etar_en".toUpperCase(),
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
               ),
-              onTap: () {return locator<NavigationService>().navigateTo('home');},
+              onTap: () {
+                return locator<NavigationService>().navigateTo('home');
+              },
             ),
             Spacer(),
             MenuItem(
               title: "Főoldal",
-              isHighlighted: count == 1 ? true : false,
-              fontSize: 10,
+              isHighlighted: count == 0 ? true : false,
+              color: Colors.white,
               press: () {
                 return locator<NavigationService>().navigateTo('landing');
               },
             ),
             MenuItem(
-              title: "Üzembehelyezés",
+              title: "Üzemviteli dokumentáció",
               isHighlighted: count == 1 ? true : false,
-              fontSize: 10,
+              color: Colors.white,
               press: () {
                 return locator<NavigationService>().navigateTo('opStart');
               },
             ),
             MenuItem(
-              title: "Vizsgálatok",
+              title: "Emelőgépnapló",
               isHighlighted: count == 2 ? true : false,
-              fontSize: 10,
+              color: Colors.white,
               press: () {
                 return locator<NavigationService>().navigateTo('inspection');
               },
             ),
-            MenuItem(
-              title: "Karbantartás",
-              isHighlighted: count == 3 ? true : false,
-              fontSize: 10,
-              press: () {
-                return locator<NavigationService>().navigateTo('maintenance');
-              },
-            ),
-            MenuItem(
-              title: "Javítás",
-              isHighlighted: count == 4 ? true : false,
-              fontSize: 10,
-              press: () {
-                return locator<NavigationService>().navigateTo('repair');
-              },
-            ),
             DefaultButton(
-              text: "ETAR app",
+              text: "ETAR_EN app",
               press: () {
                 return locator<NavigationService>().navigateTo('etarApp');
               },
             ),
           ],
         ),
-      );
+      ),
+    );
   }
 }
