@@ -1,3 +1,5 @@
+const String LogBookRoute = 'logBook';
+const String OpDocRoute = 'opDoc';
 const String LandingRoute = 'landing';
 const String HomeRoute = 'home';
 const String EnHomeRoute = 'enHome';
