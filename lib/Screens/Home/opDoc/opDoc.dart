@@ -26,7 +26,8 @@ class OpDocScreen extends StatelessWidget {
               ),
             ),
             height: size.height - 130,
-            child: SingleChildScrollView(child: BodyOpDoc())),
+            width: size.width,
+            child: BodyOpDoc()),
       ],
     );
   }

@@ -204,7 +204,7 @@ class LandingScreen extends StatelessWidget {
                           InkWell(
                             child: Container(
                               width: size.width*0.35,
-                              height: size.height*0.25,
+                              height: size.height > 900 ? size.height*0.25 : size.height*0.2,
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: AssetImage('assets/images/mainImage.png'),
@@ -222,6 +222,7 @@ class LandingScreen extends StatelessWidget {
 
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           SizedBox(height: 60,),
                           Row(
@@ -258,7 +259,6 @@ class LandingScreen extends StatelessWidget {
                       Container(
                         width: 300,
                         child: Row(
-
                           children: [
                             Image.asset('assets/images/LE_Doc.png',
                                 width: 50, color: Color(0xff3095C3)),
@@ -267,7 +267,7 @@ class LandingScreen extends StatelessWidget {
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 20,
+                                fontSize: size.width > 1800 ? 20 : 18,
                               ),),
                           ],
                         ),
@@ -286,7 +286,7 @@ class LandingScreen extends StatelessWidget {
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 20,
+                                fontSize: size.width > 1800 ? 20 : 18,
                               ),
                             ),
                           ],
@@ -295,7 +295,7 @@ class LandingScreen extends StatelessWidget {
                       SizedBox(height: size.height*0.04,),
                       Container(
                         width: size.width*0.35,
-                        height: size.height*0.25,
+                        height: size.height > 900 ? size.height*0.25 : size.height*0.2,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('assets/images/image_en.jpg'),

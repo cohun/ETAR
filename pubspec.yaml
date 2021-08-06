@@ -24,7 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   responsive_builder: ^0.3.0
-  get_it: ^5.0.3
+  get_it: ^5.0.6
   url_launcher: ^5.7.10
   flutter_markdown: ^0.5.2
 

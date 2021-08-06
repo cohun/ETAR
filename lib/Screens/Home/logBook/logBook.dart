@@ -28,7 +28,7 @@ class LogBookScreen extends StatelessWidget {
               ),
             ),
             height: size.height - 130,
-            child: SingleChildScrollView(child: BodyLogBook())),
+            child: BodyLogBook()),
       ],
     );
   }

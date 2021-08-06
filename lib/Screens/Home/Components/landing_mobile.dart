@@ -38,7 +38,7 @@ class LandingMobile extends StatelessWidget {
                       Text(
                         'Emelőgépek Üzemvitele',
                         style: TextStyle(
-                            fontSize: 18,
+                            fontSize: size.width > 370 ? 18 : 16,
                             fontWeight: FontWeight.bold,
                             foreground: Paint()..shader = iphoneShader,
                             shadows: [
@@ -62,7 +62,7 @@ class LandingMobile extends StatelessWidget {
                     children: [
                       InkWell(
                         child: Container(
-                          width: 40,
+                          width: size.width > 370 ? 40 : 30,
                           child: Image.asset(
                             'assets/images/Etar.png',
                           ),
@@ -75,7 +75,7 @@ class LandingMobile extends StatelessWidget {
                       SizedBox(width: 10),
                       InkWell(
                         child: Container(
-                          width: 40,
+                          width: size.width > 370 ? 40 : 30,
                           child: Image.asset(
                             'assets/images/etar_en.png',
                           ),
@@ -94,7 +94,7 @@ class LandingMobile extends StatelessWidget {
                 children: [
                   InkWell(
                     child: Container(
-                      width: 90,
+                      width: size.height > 670 ? 90 : 50,
                       child: Image.asset(
                         'assets/images/Etar.png',
                       ),
@@ -114,25 +114,26 @@ class LandingMobile extends StatelessWidget {
                       "\n előírásai szerint.",
                       style: TextStyle(
                         color: Color(0xFF6F92B6),
-                        fontSize: 10,
+                        fontSize:  size.width > 360 ? 10 : 8,
                       )),
                 ],
               ),
               SizedBox(height: 10),
               Container(
-                width: 300,
+                width: size.height > 670 ? 300 : 200,
                 child: Row(
                   children: [
-                    Image.asset('assets/images/opStart.png', width: 40),
+                    Image.asset('assets/images/opStart.png',
+                        width: size.width > 370 ? 40 : 30),
                     SizedBox(
-                      width: 20,
+                      width: 15,
                     ),
                     Text(
                       'Üzembehelyezés',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: size.height > 670 ? 18 : 13,
                       ),
                     ),
                   ],
@@ -142,19 +143,20 @@ class LandingMobile extends StatelessWidget {
                 height: 10,
               ),
               Container(
-                width: 300,
+                width: size.height > 670 ? 300 : 200,
                 child: Row(
                   children: [
-                    Image.asset('assets/images/inspection.jpg', width: 40),
+                    Image.asset('assets/images/inspection.jpg',
+                        width: size.width > 370 ? 40 : 30),
                     SizedBox(
-                      width: 20,
+                      width: 15,
                     ),
                     Text(
                       'Időszakos vizsgálatok',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: size.height > 670 ? 18 : 13,
                       ),
                     ),
                   ],
@@ -164,19 +166,20 @@ class LandingMobile extends StatelessWidget {
                 height: 10,
               ),
               Container(
-                width: 300,
+                width: size.height > 670 ? 300 : 200,
                 child: Row(
                   children: [
-                    Image.asset('assets/images/service.jpg', width: 40),
+                    Image.asset('assets/images/service.jpg',
+                        width: size.width > 370 ? 40 : 30),
                     SizedBox(
-                      width: 20,
+                      width: 15,
                     ),
                     Text(
                       'Javítások',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: size.height > 670 ? 18 : 13,
                       ),
                     ),
                   ],
@@ -186,19 +189,20 @@ class LandingMobile extends StatelessWidget {
                 height: 10,
               ),
               Container(
-                width: 300,
+                width: size.height > 670 ? 300 : 200,
                 child: Row(
                   children: [
-                    Image.asset('assets/images/maintenance.jpg', width: 40),
+                    Image.asset('assets/images/maintenance.jpg',
+                        width: size.width > 370 ? 40 : 30),
                     SizedBox(
-                      width: 20,
+                      width: 15,
                     ),
                     Text(
                       'Karbantartások',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: size.height > 670 ? 18 : 13,
                       ),
                     ),
                   ],
@@ -210,7 +214,7 @@ class LandingMobile extends StatelessWidget {
               Row(
                 children: [
                   Container(
-                    width: 90,
+                    width: size.height > 670 ? 90 : 50,
                     child: Image.asset(
                       'assets/images/etar_en.png',
                     ),
@@ -225,18 +229,18 @@ class LandingMobile extends StatelessWidget {
                 "\nhasználat közben észlelt események rögzítése",
                 style: TextStyle(
                   color: Color(0xFF6F92B6),
-                  fontSize: size.width > 1150 ? 16 : 10,
+                  fontSize: size.width > 1150 ? 16 : size.width > 360 ? 10 : 8,
                 ),
               ),
                 ],
               ),
               SizedBox(height: 10),
               Container(
-                width: 300,
+                width: size.height > 670 ? 300 : 200,
                 child: Row(
                   children: [
                     Image.asset('assets/images/LE_Doc.png',
-                        width: 40, color: Color(0xff3095C3)),
+                        width: size.width > 370 ? 40 : 30, color: Color(0xff3095C3)),
                     SizedBox(
                       width: 10,
                     ),
@@ -245,7 +249,7 @@ class LandingMobile extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: size.height > 670 ? 18 : 13,
                       ),
                     ),
                   ],
@@ -255,19 +259,20 @@ class LandingMobile extends StatelessWidget {
                 height: 10,
               ),
               Container(
-                width: 300,
+                width: size.height > 670 ? 300 : 200,
                 child: Row(
                   children: [
-                    Image.asset('assets/images/logBookIcon.png', width: 40),
+                    Image.asset('assets/images/logBookIcon.png',
+                        width: size.width > 370 ? 40 : 30),
                     SizedBox(
-                      width: 20,
+                      width: 15,
                     ),
                     Text(
                       'Emelőgépnapló',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: size.height > 670 ? 18 : 13,
                       ),
                     ),
                   ],
