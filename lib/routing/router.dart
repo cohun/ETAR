@@ -7,7 +7,9 @@ import 'package:etar_app/Screens/Home/home_screen.dart';
 import 'package:etar_app/Screens/Home/inspection/inspection_screen.dart';
 import 'package:etar_app/Screens/Home/landing_screen.dart';
 import 'package:etar_app/Screens/Home/law/law_screen.dart';
+import 'package:etar_app/Screens/Home/logBook/logBook.dart';
 import 'package:etar_app/Screens/Home/maintenance/maintenance_screen.dart';
+import 'package:etar_app/Screens/Home/opDoc/opDoc.dart';
 import 'package:etar_app/Screens/Home/opStart/opStart_screen.dart';
 import 'package:etar_app/Screens/Home/repair/repair_screen.dart';
 import 'package:etar_app/routing/route_names.dart';
@@ -16,6 +18,10 @@ import 'package:flutter/widgets.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
+    case LogBookRoute:
+      return _getPageRoute(LogBookScreen());
+    case OpDocRoute:
+      return _getPageRoute(OpDocScreen());
     case LandingRoute:
       return _getPageRoute(LandingScreen());
     case HomeRoute:

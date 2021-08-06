@@ -264,7 +264,7 @@ class Body extends StatelessWidget {
                               ),
                               onTap: () {
                                 return locator<NavigationService>()
-                                    .navigateTo('opStart');
+                                    .navigateTo('opDoc');
                               },
                             ),
                             //******************************************************
@@ -311,7 +311,7 @@ class Body extends StatelessWidget {
                               ),
                               onTap: () {
                                 return locator<NavigationService>()
-                                    .navigateTo('inspection');
+                                    .navigateTo('logBook');
                               },
                             ),
                           ],
