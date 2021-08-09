@@ -204,7 +204,7 @@ class LandingScreen extends StatelessWidget {
                           InkWell(
                             child: Container(
                               width: size.width*0.35,
-                              height: size.height > 900 ? size.height*0.25 : size.height*0.2,
+                              height: size.height > 900 ? size.height*0.25 : size.height*0.15,
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: AssetImage('assets/images/mainImage.png'),
@@ -295,7 +295,7 @@ class LandingScreen extends StatelessWidget {
                       SizedBox(height: size.height*0.04,),
                       Container(
                         width: size.width*0.35,
-                        height: size.height > 900 ? size.height*0.25 : size.height*0.2,
+                        height: size.height > 900 ? size.height*0.25 : size.height*0.15,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('assets/images/image_en.jpg'),

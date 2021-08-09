@@ -318,7 +318,7 @@ class Body extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 12.0, bottom: 73),
+                        padding: EdgeInsets.only(right: 12.0, bottom: size.height > 900 ? 73 : 20),
                         child: Card(
                             color: Color(0xff3095C3),
                           child: Padding(
@@ -345,7 +345,7 @@ class Body extends StatelessWidget {
                       ),
                       Container(
                         width: size.width*0.35,
-                        height: size.height*0.25,
+                        height: size.height > 900 ? size.height*0.25 : size.height*0.15,
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('assets/images/image_en.jpg'),

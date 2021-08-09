@@ -27,7 +27,7 @@ class LogBookScreen extends StatelessWidget {
                 ],
               ),
             ),
-            height: size.height - 130,
+            height: size.height / size.width < 1.6 ? size.height - 130 : size.height - 80,
             child: BodyLogBook()),
       ],
     );

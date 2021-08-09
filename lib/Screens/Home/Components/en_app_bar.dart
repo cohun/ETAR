@@ -59,7 +59,7 @@ class EnAppBar extends StatelessWidget {
                     color: Colors.white),
               ),
               onTap: () {
-                return locator<NavigationService>().navigateTo('home');
+                return locator<NavigationService>().navigateTo('enHome');
               },
             ),
             Spacer(),

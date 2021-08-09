@@ -105,7 +105,7 @@ class EnBodyMobile extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: size.height > 620 ? 20 :10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -115,14 +115,14 @@ class EnBodyMobile extends StatelessWidget {
                       elevation: 12,
                       child: Container(
                         constraints:
-                        BoxConstraints(maxHeight: 160, maxWidth: 120),
+                        BoxConstraints(maxHeight: size.height > 620 ? 160 : 120, maxWidth: 120),
                         child: Column(
                           children: [
                             SizedBox(
                               height: 10,
                             ),
                             Container(
-                              constraints: BoxConstraints(maxHeight: 100),
+                              constraints: BoxConstraints(maxHeight: size.height > 620 ? 100 : 60),
                               child: Image.asset("assets/images/LE_Doc.png"),
                             ),
                             SizedBox(
@@ -150,7 +150,7 @@ class EnBodyMobile extends StatelessWidget {
                     ),
                     onTap: () {
                       return locator<NavigationService>()
-                          .navigateTo('opStart');
+                          .navigateTo('opDoc');
                     },
                   ),
                   //******************************************************
@@ -159,14 +159,14 @@ class EnBodyMobile extends StatelessWidget {
                       elevation: 16,
                       child: Container(
                         constraints:
-                        BoxConstraints(maxHeight: 160, maxWidth: 120),
+                        BoxConstraints(maxHeight: size.height > 620 ? 160 : 120, maxWidth: 120),
                         child: Column(
                           children: [
                             SizedBox(
                               height: 10,
                             ),
                             Container(
-                              constraints: BoxConstraints(maxHeight: 100),
+                              constraints: BoxConstraints(maxHeight: size.height > 620 ? 100 : 60),
                               child: Image.asset(
                                 "assets/images/logBookIcon.png",
                               ),
@@ -196,12 +196,12 @@ class EnBodyMobile extends StatelessWidget {
                     ),
                     onTap: () {
                       return locator<NavigationService>()
-                          .navigateTo('inspection');
+                          .navigateTo('logBook');
                     },
                   ),
                 ],
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: size.height > 620 ? 20 :10,),
               InkWell(
                 onTap: () {
                   return locator<NavigationService>().navigateTo('iframe');
@@ -209,8 +209,8 @@ class EnBodyMobile extends StatelessWidget {
                 child: FittedBox(
                   // Now it just take the required spaces
                   child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
-                    padding: EdgeInsets.all(15),
+                    margin: EdgeInsets.symmetric(vertical: size.height > 620 ? 20 :10, horizontal: 50),
+                    padding: EdgeInsets.all(size.height > 620 ? 15 :5),
                     decoration: BoxDecoration(
                       color: Color(0xFF372930),
                       borderRadius: BorderRadius.circular(34),

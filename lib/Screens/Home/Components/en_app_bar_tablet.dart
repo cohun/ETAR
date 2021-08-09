@@ -40,7 +40,7 @@ class NavigationBarEnTablet extends StatelessWidget {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
               ),
               onTap: () {
-                return locator<NavigationService>().navigateTo('home');
+                return locator<NavigationService>().navigateTo('enHome');
               },
             ),
             Spacer(),
@@ -57,7 +57,7 @@ class NavigationBarEnTablet extends StatelessWidget {
               isHighlighted: count == 1 ? true : false,
               color: Colors.white,
               press: () {
-                return locator<NavigationService>().navigateTo('opStart');
+                return locator<NavigationService>().navigateTo('opDoc');
               },
             ),
             MenuItem(
@@ -65,7 +65,7 @@ class NavigationBarEnTablet extends StatelessWidget {
               isHighlighted: count == 2 ? true : false,
               color: Colors.white,
               press: () {
-                return locator<NavigationService>().navigateTo('inspection');
+                return locator<NavigationService>().navigateTo('logBook');
               },
             ),
             DefaultButton(
