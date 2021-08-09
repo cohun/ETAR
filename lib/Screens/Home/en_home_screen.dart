@@ -82,7 +82,7 @@ class Body extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 50, top: 80),
+                  padding: EdgeInsets.only(left: 50, top: size.height > 720 ? 80 : 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -211,7 +211,7 @@ class Body extends StatelessWidget {
                 ),
                 Spacer(),
                 Padding(
-                  padding: const EdgeInsets.only(top: 80.0),
+                  padding: EdgeInsets.only(top: size.height > 720 ? 80.0: 20),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

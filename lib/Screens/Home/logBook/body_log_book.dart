@@ -87,7 +87,7 @@ class BodyLogBook extends StatelessWidget {
                 Row(
                   children: [
                     SizedBox(
-                      width: 30,
+                      width: size.height > 720 ? 30 :10,
                     ),
                     Text(
                       'Az emelőgép kisérő dokumentációja:',
@@ -100,7 +100,7 @@ class BodyLogBook extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 30,
+                  width: size.height > 720 ? 30 :10,
                 ),
                 Card(
                   color: Colors.orange[400],
@@ -114,7 +114,6 @@ class BodyLogBook extends StatelessWidget {
                       'Az emelőgépnapló arra szolgál, hogy szakszerű vezetése '
                       'esetén tájékoztasson minket az emelőgép állapotáról és minden '
                       'a biztonságot érintő beavatkozásról. '
-                      '\n'
                       '\n\n - a műszakos vizsgálatokról'
                       '\n\n - javításokról'
                       '\n\n - egyéb ellenőrző felülvizsgálatokról',

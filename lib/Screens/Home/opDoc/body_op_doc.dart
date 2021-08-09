@@ -88,7 +88,7 @@ class BodyOpDoc extends StatelessWidget {
                 Row(
                   children: [
                     SizedBox(
-                      width: 30,
+                      width: size.height > 720 ? 30 :10,
                     ),
                     Text(
                       'Az emelőgép kisérő dokumentációja:',
@@ -101,7 +101,7 @@ class BodyOpDoc extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 30,
+                  width: size.height > 720 ? 30 :10,
                 ),
                 Card(
                   color: Color(0xff3095C3),
@@ -114,7 +114,6 @@ class BodyOpDoc extends StatelessWidget {
                       'jellemzőit, az üzemvitellel kapcsolatos adatokat, valamint '
                       'alkalmas az időszakos vizsgálatok, a javítások, a fődarabcserék '
                       'és működési idő (üzemóra) nyilvántartására:'
-                      '\n'
                       '\n\n - gépi hajtású emelőgépeknél az MSZ 9725 szerinti '
                       'Emelőgépek üzemviteli dokumentuma (régebben: darukönyv),'
                       '\n\n - gépi hajtású targoncáknál, az MSZ 16226 szerinti'
@@ -127,7 +126,7 @@ class BodyOpDoc extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: size.height > 720 ? 30 : 10,
                 ),
                 Card(
                   color: Color(0xff3095C3),

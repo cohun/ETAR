@@ -3,6 +3,7 @@ import 'package:etar_app/Screens/Home/Components/contract.dart';
 import 'package:etar_app/Screens/Home/Components/iframe_screen.dart';
 import 'package:etar_app/Screens/Home/en_home_screen.dart';
 import 'package:etar_app/Screens/Home/etarApp/etarApp_screen.dart';
+import 'package:etar_app/Screens/Home/etarEnApp/etar_en_app.dart';
 import 'package:etar_app/Screens/Home/home_screen.dart';
 import 'package:etar_app/Screens/Home/inspection/inspection_screen.dart';
 import 'package:etar_app/Screens/Home/landing_screen.dart';
@@ -38,6 +39,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(RepairScreen());
     case EtarApp:
       return _getPageRoute(EtarAppScreen());
+    case EtarEnAppRoute:
+      return _getPageRoute(EtarEnApp());
     case Law:
       return _getPageRoute(LawScreen());
     case Iframe:

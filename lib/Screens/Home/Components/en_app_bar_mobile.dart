@@ -57,7 +57,7 @@ class NavigationBarEnMobile extends StatelessWidget {
           DefaultButton(
             text: "ETAR_EN app",
             press: () {
-              return locator<NavigationService>().navigateTo('etarApp');
+              return locator<NavigationService>().navigateTo('etarEnApp');
             },
           ),
         ],

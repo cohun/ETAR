@@ -8,6 +8,7 @@ const String Inspection = 'inspection';
 const String Maintenance = 'maintenance';
 const String Repair = 'repair';
 const String EtarApp = 'etarApp';
+const String EtarEnAppRoute = 'etarEnApp';
 const String Law = 'law';
 const String Iframe = 'iframe';
 const String Contract = 'contract';

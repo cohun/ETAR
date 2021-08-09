@@ -32,7 +32,8 @@ class LandingScreen extends StatelessWidget {
           child: Scaffold(
             backgroundColor: Colors.transparent,
             body: Padding(
-              padding: EdgeInsets.symmetric(horizontal: size.width > 900 ? 100: 60, vertical: 40),
+              padding: EdgeInsets.symmetric(horizontal: size.width > 900 ? 100: 60,
+                  vertical: size.height > 720 ? 40 : 10),
               child: Column(
                 children: [
                   Row(
@@ -102,7 +103,7 @@ class LandingScreen extends StatelessWidget {
                         children: [
 
 
-                          SizedBox(height: 50),
+                          SizedBox(height: size.height > 720 ? 50 : 20),
 
                           Row(
                             children: [
