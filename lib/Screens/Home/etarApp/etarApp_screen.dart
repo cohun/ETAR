@@ -27,7 +27,7 @@ class EtarAppScreen extends StatelessWidget {
           title: Text("$title:"),
           content: Text("$text"),
           actions: <Widget>[
-            FlatButton(
+            TextButton(
               child: Text('Bezár!'),
               onPressed: () {
                return Navigator.of(context, rootNavigator: true).pop();

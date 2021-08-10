@@ -7,6 +7,25 @@ import 'package:responsive_builder/responsive_builder.dart';
 class BodyOpDoc extends StatelessWidget {
   const BodyOpDoc({Key key}) : super(key: key);
 
+  _showDialog(BuildContext context, String title, String text) {
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        elevation: 5.0,
+        title: Text("$title:"),
+        content: Text("$text"),
+        actions: <Widget>[
+          TextButton(
+            child: Text('Bezár!'),
+            onPressed: () {
+              return Navigator.of(context, rootNavigator: true).pop();
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -67,10 +86,28 @@ class BodyOpDoc extends StatelessWidget {
                     SizedBox(
                       width: size.width > 1150 ? 30 : 12,
                     ),
-                    Container(
-                      constraints: BoxConstraints(maxHeight: 100),
-                      child: Image.asset(
-                        "assets/images/paragraph-symbol_Q.jpg",
+                    InkWell(
+                      onTap: () {
+                        return _showDialog(context, 'Emelőgépek üzemviteli dokumentuma', 'MSZ 9725:2018 előírásainak '
+                            'megfelelően, üzemeltető az első üzembehelyezéskor '
+                            'hozza létre a gyártói adatok alapján '
+                            '\n\nAz üzemeltetés írásban való elrendelését az üzemeltető munkáltató '
+                            'egy munkavédelmi szempontú előzetes vizsgálat pozitív eredménye alapján teheti meg.'
+                            '\nVizsgálat nélkül nem lehet meggyőződni, hogy az emelőgép, '
+                            'illetve a vele megvalósított emelési technológia megfelel-e '
+                            'az egészséget nem veszélyeztető munkavégzéshez szükséges tárgyi, személyi, '
+                            'szervezési, munkakörnyezeti feltételeknek, valamint, hogy teljesíti-e '
+                            'a MvT 18. § (1) bekezdése szerinti követelményeket? '
+                            '\nVizsgálni kell az emelőgép kölcsönhatását a munkakörnyezettel, ezért ez '
+                            'munkavédelmi szaktevékenységnek minősül. '
+                            '\nA rendelkezésre álló vizsgálati szabvány 2011 óta az MSZ 6726-1:2011 '
+                            'Emelőgépek rendeltetésszerű használatra való alkalmasságának ellenőrzése: 1. rész: Általános előírások.');
+                      },
+                      child: Container(
+                        constraints: BoxConstraints(maxHeight: 100),
+                        child: Image.asset(
+                          "assets/images/paragraph-symbol_Q.jpg",
+                        ),
                       ),
                     ),
                   ],
