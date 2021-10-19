@@ -40,17 +40,19 @@ class LandingMobile extends StatelessWidget {
                         style: TextStyle(
                             fontSize: size.width > 370 ? 18 : 16,
                             fontWeight: FontWeight.bold,
-                            foreground: Paint()..shader = iphoneShader,
-                            shadows: [
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black),
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black12),
-                            ]),
+                            color: Colors.white70,
+                            // foreground: Paint()..shader = iphoneShader,
+                            // shadows: [
+                            //   Shadow(
+                            //       offset: Offset(10, 10),
+                            //       blurRadius: 20,
+                            //       color: Colors.black),
+                            //   Shadow(
+                            //       offset: Offset(10, 10),
+                            //       blurRadius: 20,
+                            //       color: Colors.black12),
+                            // ],
+                        ),
                       ),
                       Text(
                           'Üzemeltetői adminisztrációs feladatok\nkomplett ellátása',

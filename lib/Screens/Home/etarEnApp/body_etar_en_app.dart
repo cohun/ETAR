@@ -15,7 +15,7 @@ class BodyEtarEnApp extends StatelessWidget {
 
   _launchURL() async {
     const url =
-        'https://play.google.com/store/apps/details?id=com.attila.hitb&hl=en_US&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1';
+        'https://play.google.com/store/apps/details?id=hu.hitb.etar_en&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
