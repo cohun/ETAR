@@ -4,6 +4,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../locator.dart';
 import 'Components/landing_mobile.dart';
+import 'Components/landing_tablet.dart';
 
 class LandingScreen extends StatelessWidget {
   LandingScreen({Key key}) : super(key: key);
@@ -16,8 +17,9 @@ class LandingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return ScreenTypeLayout(
-        breakpoints: ScreenBreakpoints(desktop: 750, tablet: 680, watch: 200),
+        breakpoints: ScreenBreakpoints(desktop: 1025, tablet: 680, watch: 200),
         mobile: LandingMobile(),
+        tablet: LandingTablet(),
         desktop: Container(
         height: size.height,
           decoration: BoxDecoration(
