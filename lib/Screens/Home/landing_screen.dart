@@ -17,7 +17,7 @@ class LandingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return ScreenTypeLayout(
-        breakpoints: ScreenBreakpoints(desktop: 1025, tablet: 680, watch: 200),
+        breakpoints: ScreenBreakpoints(desktop: 1025, tablet: 426, watch: 200),
         mobile: LandingMobile(),
         tablet: LandingTablet(),
         desktop: Container(
