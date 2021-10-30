@@ -49,7 +49,7 @@ class BodyEtarEnApp extends StatelessWidget {
                             .navigateTo('contract');
                       },
                       child: Container(
-                        width: size.width * 0.15,
+                        width: size.width * 0.13,
                         child: Image.asset("assets/images/etar_en.png"),
                       ),
                     ),
@@ -60,7 +60,7 @@ class BodyEtarEnApp extends StatelessWidget {
                     ),
                     InkWell(
                       child: Container(
-                        width: size.width * 0.30,
+                        width: size.width * 0.22,
                         child:
                             Image.asset('assets/images/google-play-badge.png'),
                       ),
@@ -100,19 +100,21 @@ class BodyEtarEnApp extends StatelessWidget {
                       child: Text(
                         'Főbb műszaki jellemzők',
                         style: TextStyle(
-                            fontSize: size.width > 900 ? 50 : 35,
-                            fontWeight: FontWeight.bold,
-                            foreground: Paint()..shader = iphoneShader,
-                            shadows: [
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black),
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black12),
-                            ]),
+                            fontSize: size.width > 1025 ? 35 : 25,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.blue.shade200,
+                            // foreground: Paint()..shader = iphoneShader,
+                            // shadows: [
+                            //   Shadow(
+                            //       offset: Offset(10, 10),
+                            //       blurRadius: 20,
+                            //       color: Colors.black),
+                            //   Shadow(
+                            //       offset: Offset(10, 10),
+                            //       blurRadius: 20,
+                            //       color: Colors.black12),
+                            // ],
+                        ),
                       ),
                     ),
                     Icon(
@@ -156,19 +158,21 @@ class BodyEtarEnApp extends StatelessWidget {
                       child: Text(
                         'Bejegyzésre jogosultak',
                         style: TextStyle(
-                            fontSize: size.width > 900 ? 50 : 35,
-                            fontWeight: FontWeight.bold,
-                            foreground: Paint()..shader = iphoneShader,
-                            shadows: [
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black),
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black12),
-                            ]),
+                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.blue.shade200,
+                            // foreground: Paint()..shader = iphoneShader,
+                            // shadows: [
+                            //   Shadow(
+                            //       offset: Offset(10, 10),
+                            //       blurRadius: 20,
+                            //       color: Colors.black),
+                            //   Shadow(
+                            //       offset: Offset(10, 10),
+                            //       blurRadius: 20,
+                            //       color: Colors.black12),
+                            // ],
+                        ),
                       ),
                     ),
                     Icon(
@@ -216,19 +220,10 @@ class BodyEtarEnApp extends StatelessWidget {
                       child: Text(
                         'Vizsgálati csoportszám',
                         style: TextStyle(
-                            fontSize: size.width > 900 ? 50 : 35,
-                            fontWeight: FontWeight.bold,
-                            foreground: Paint()..shader = iphoneShader,
-                            shadows: [
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black),
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black12),
-                            ]),
+                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.blue.shade200,
+                        ),
                       ),
                     ),
                     Icon(
@@ -274,19 +269,10 @@ class BodyEtarEnApp extends StatelessWidget {
                       child: Text(
                         'Üzemeltetésre vonatkozó adatok',
                         style: TextStyle(
-                            fontSize: size.width > 900 ? 50 : 35,
-                            fontWeight: FontWeight.bold,
-                            foreground: Paint()..shader = iphoneShader,
-                            shadows: [
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black),
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black12),
-                            ]),
+                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.blue.shade200,
+                        ),
                       ),
                     ),
                     Icon(
@@ -333,19 +319,10 @@ class BodyEtarEnApp extends StatelessWidget {
                       child: Text(
                         'Cserélt fő darabok, részegységek',
                         style: TextStyle(
-                            fontSize: size.width > 900 ? 50 : 35,
-                            fontWeight: FontWeight.bold,
-                            foreground: Paint()..shader = iphoneShader,
-                            shadows: [
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black),
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black12),
-                            ]),
+                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.blue.shade200,
+                        ),
                       ),
                     ),
                     Icon(
@@ -388,19 +365,10 @@ class BodyEtarEnApp extends StatelessWidget {
                       child: Text(
                         'Érintésvédelem',
                         style: TextStyle(
-                            fontSize: size.width > 900 ? 50 : 35,
-                            fontWeight: FontWeight.bold,
-                            foreground: Paint()..shader = iphoneShader,
-                            shadows: [
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black),
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black12),
-                            ]),
+                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.blue.shade200,
+                        ),
                       ),
                     ),
                     Icon(
@@ -443,19 +411,10 @@ class BodyEtarEnApp extends StatelessWidget {
                       child: Text(
                         'Időszakos vizsgálatok',
                         style: TextStyle(
-                            fontSize: size.width > 900 ? 50 : 35,
-                            fontWeight: FontWeight.bold,
-                            foreground: Paint()..shader = iphoneShader,
-                            shadows: [
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black),
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black12),
-                            ]),
+                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.blue.shade200,
+                        ),
                       ),
                     ),
                     Icon(
@@ -498,19 +457,10 @@ class BodyEtarEnApp extends StatelessWidget {
                       child: Text(
                         'Terhelési próba',
                         style: TextStyle(
-                            fontSize: size.width > 900 ? 50 : 35,
-                            fontWeight: FontWeight.bold,
-                            foreground: Paint()..shader = iphoneShader,
-                            shadows: [
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black),
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black12),
-                            ]),
+                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.blue.shade200,
+                        ),
                       ),
                     ),
                     Icon(
@@ -554,19 +504,10 @@ class BodyEtarEnApp extends StatelessWidget {
                       child: Text(
                         'Egyenértékű biztonság igazolása',
                         style: TextStyle(
-                            fontSize: size.width > 900 ? 50 : 35,
-                            fontWeight: FontWeight.bold,
-                            foreground: Paint()..shader = iphoneShader,
-                            shadows: [
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black),
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black12),
-                            ]),
+                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.blue.shade200,
+                        ),
                       ),
                     ),
                     Icon(
@@ -609,19 +550,10 @@ class BodyEtarEnApp extends StatelessWidget {
                       child: Text(
                         'Műszakos vizsgálatok',
                         style: TextStyle(
-                            fontSize: size.width > 900 ? 50 : 35,
-                            fontWeight: FontWeight.bold,
-                            foreground: Paint()..shader = iphoneShader,
-                            shadows: [
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black),
-                              Shadow(
-                                  offset: Offset(10, 10),
-                                  blurRadius: 20,
-                                  color: Colors.black12),
-                            ]),
+                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.blue.shade200,
+                        ),
                       ),
                     ),
                     Icon(

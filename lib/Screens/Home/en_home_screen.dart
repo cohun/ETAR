@@ -96,7 +96,7 @@ class Body extends StatelessWidget {
                                   .navigateTo('contract');
                             },
                             child: Container(
-                              width: size.width * 0.15,
+                              width: size.width > 1770 ? size.width* 0.1 : size.width * 0.15,
                               child: Image.asset("assets/images/etar_en.png"),
                             ),
                           ),
@@ -128,25 +128,26 @@ class Body extends StatelessWidget {
                               "\naz emelőgépekhez előírt dokumentációk és napló bejegyzések naprakész"
                               "\nvezetését, megörzését és a bejegyzésre jogosultak körének szabályozását.",
                           style: TextStyle(
-                            fontSize: size.width > 1770 ? 24 : size.width > 1450 ? 19 : size.width > 1180 ? 16 : size.width > 900 ? 11 :10,
+                            fontSize: size.width > 1770 ? 16 : size.width > 1450 ? 19 : size.width > 1180 ? 16 : size.width > 900 ? 11 :10,
 
-                              fontWeight: FontWeight.bold,
-                              foreground: Paint()..shader = iphoneShader,
-                              shadows: [
-                                Shadow(
-                                    offset: Offset(10, 10),
-                                    blurRadius: 20,
-                                    color: Colors.black),
-                                Shadow(
-                                    offset: Offset(10, 10),
-                                    blurRadius: 20,
-                                    color: Colors.black12),
-                              ]
+                              fontWeight: FontWeight.w400,
+                              color: Colors.blueGrey.shade200,
+                              // foreground: Paint()..shader = iphoneShader,
+                              // shadows: [
+                              //   Shadow(
+                              //       offset: Offset(10, 10),
+                              //       blurRadius: 20,
+                              //       color: Colors.black),
+                              //   Shadow(
+                              //       offset: Offset(10, 10),
+                              //       blurRadius: 20,
+                              //       color: Colors.black12),
+                              // ]
                           ),
                         ),
                       ),
                       SizedBox(
-                        height: 50,
+                        height: size.width > 1770 ? 20 : 50,
                       ),
                       InkWell(
                         onTap: () {
