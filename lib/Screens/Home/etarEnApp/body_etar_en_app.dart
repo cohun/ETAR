@@ -1,10 +1,10 @@
-import 'package:etar_app/Screens/Home/logBook/body_log_book_mobile.dart';
 import 'package:etar_app/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../locator.dart';
+import 'body_etar_en_app_mobile.dart';
 
 class BodyEtarEnApp extends StatelessWidget {
   BodyEtarEnApp({Key key}) : super(key: key);
@@ -27,8 +27,8 @@ class BodyEtarEnApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return ScreenTypeLayout(
-      breakpoints: ScreenBreakpoints(desktop: 750, tablet: 680, watch: 200),
-      mobile: BodyLogBookMobile(),
+      breakpoints: ScreenBreakpoints(desktop: 1025, tablet: 780, watch: 200),
+      mobile: BodyEtarENAppMobile(),
       desktop: Scaffold(
         backgroundColor: Colors.transparent,
         body: Container(
@@ -79,8 +79,8 @@ class BodyEtarEnApp extends StatelessWidget {
                     ' teszi lehetővé.',
                     style: TextStyle(
                       color: Colors.white70,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18,
                     ),
                   ),
                 ),
@@ -96,24 +96,13 @@ class BodyEtarEnApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: size.width * 0.3,
+                      width: size.width * 0.25,
                       child: Text(
                         'Főbb műszaki jellemzők',
                         style: TextStyle(
-                            fontSize: size.width > 1025 ? 35 : 25,
+                            fontSize: 30,
                             fontWeight: FontWeight.w600,
                             color: Colors.blue.shade200,
-                            // foreground: Paint()..shader = iphoneShader,
-                            // shadows: [
-                            //   Shadow(
-                            //       offset: Offset(10, 10),
-                            //       blurRadius: 20,
-                            //       color: Colors.black),
-                            //   Shadow(
-                            //       offset: Offset(10, 10),
-                            //       blurRadius: 20,
-                            //       color: Colors.black12),
-                            // ],
                         ),
                       ),
                     ),
@@ -124,16 +113,17 @@ class BodyEtarEnApp extends StatelessWidget {
                     ),
                     InkWell(
                       child: Container(
-                        width: size.width * 0.30,
+                        width: size.width * 0.5,
                         child: Card(
                           color: Color(0xff3095C3),
                           child: Padding(
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.all(14),
                             child: Text(
                               'A típus, megnevezés, teherbírás, méret (pl. gémkinyúlás), '
                                   'gyártási szám, gyártási év, gyártó és egyéb releváns, '
                                   'gépre vonatkozó információ megadása.',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.bold,
+                              fontSize: 17),
                             ),
                           ),
                         ),
@@ -154,11 +144,11 @@ class BodyEtarEnApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: size.width * 0.3,
+                      width: size.width * 0.25,
                       child: Text(
                         'Bejegyzésre jogosultak',
                         style: TextStyle(
-                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontSize: 30,
                           fontWeight: FontWeight.w600,
                           color: Colors.blue.shade200,
                             // foreground: Paint()..shader = iphoneShader,
@@ -182,11 +172,11 @@ class BodyEtarEnApp extends StatelessWidget {
                     ),
                     InkWell(
                       child: Container(
-                        width: size.width * 0.30,
+                        width: size.width * 0.5,
                         child: Card(
                           color: Color(0xff3095C3),
                           child: Padding(
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.all(14),
                             child: Text(
                               'Naplóbejegyzésre jogosultak az alábbi csoportokba sorolhatóak: '
                               '\n\n - ADMIN: az ETAR app-ban irási jogosultsággal rendelkezők köre'
@@ -195,7 +185,7 @@ class BodyEtarEnApp extends StatelessWidget {
                               '\n - VIZSGÁLÓ: aki EBSZ előírásai szerint időszakos vizsgálat elvégzésére jogosult'
                               '\n\n az ADMIN jogosultságú felhasználók tudnak KEZELŐKET, KARBANTARTÓKAT, ill. '
                               'VIZSGÁLÓKAT az egyes emelőgépekhez hozzárendelni.',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                             ),
                           ),
                         ),
@@ -216,11 +206,11 @@ class BodyEtarEnApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: size.width * 0.3,
+                      width: size.width * 0.25,
                       child: Text(
                         'Vizsgálati csoportszám',
                         style: TextStyle(
-                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontSize: 30,
                           fontWeight: FontWeight.w600,
                           color: Colors.blue.shade200,
                         ),
@@ -233,18 +223,18 @@ class BodyEtarEnApp extends StatelessWidget {
                     ),
                     InkWell(
                       child: Container(
-                        width: size.width * 0.30,
+                        width: size.width * 0.50,
                         child: Card(
                           color: Color(0xff3095C3),
                           child: Padding(
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.all(14),
                             child: Text(
                               'Az időszakos vizsgálati csoportszámot a napi átlagos használati '
                               'idő és a terhelés függvényében kell meghatározni. '
                               '\nMeg kell adni a megállapító jegyzőkönyv azonosítóját, keltét, készítőjét.'
                               '\nTovábbá a szerkezeti vizsgálat és a fővizsgálat időközét. '
                               '\nA program automatikusan kitölti a bejyegyző nevét és a bejegyzés időpontját. ',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                             ),
                           ),
                         ),
@@ -265,11 +255,11 @@ class BodyEtarEnApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: size.width * 0.3,
+                      width: size.width * 0.25,
                       child: Text(
                         'Üzemeltetésre vonatkozó adatok',
                         style: TextStyle(
-                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontSize: 30,
                           fontWeight: FontWeight.w600,
                           color: Colors.blue.shade200,
                         ),
@@ -282,11 +272,11 @@ class BodyEtarEnApp extends StatelessWidget {
                     ),
                     InkWell(
                       child: Container(
-                        width: size.width * 0.30,
+                        width: size.width * 0.50,
                         child: Card(
                           color: Color(0xff3095C3),
                           child: Padding(
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.all(14),
                             child: Text(
                               'A munkavédelmi szempontú előzetes vizsgálati jegyzőkönyv '
                               'alapján meg kell adni a vizsgálati dokumentum azonosítóját, kiállítójának '
@@ -294,7 +284,7 @@ class BodyEtarEnApp extends StatelessWidget {
                                   'nevét, beosztását és az üzemeltetés elrendelésének keltét.'
                               '\n\n Üzemeltetés leállítása esetén úgyanúgy meg kell adni a vizsgálati '
                                   'jegyzőköny adatait, és végül az elrendelő adatait. ',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                             ),
                           ),
                         ),
@@ -315,11 +305,11 @@ class BodyEtarEnApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: size.width * 0.3,
+                      width: size.width * 0.25,
                       child: Text(
                         'Cserélt fő darabok, részegységek',
                         style: TextStyle(
-                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontSize: 30,
                           fontWeight: FontWeight.w600,
                           color: Colors.blue.shade200,
                         ),
@@ -332,15 +322,15 @@ class BodyEtarEnApp extends StatelessWidget {
                     ),
                     InkWell(
                       child: Container(
-                        width: size.width * 0.30,
+                        width: size.width * 0.50,
                         child: Card(
                           color: Color(0xff3095C3),
                           child: Padding(
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.all(14),
                             child: Text(
                               'Az alkatrész azonosítója, megnevezése, jellemző mérete, '
                                   'a cserét végző neve, valamint a csere dátuma kerül rögzítésre',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                             ),
                           ),
                         ),
@@ -361,11 +351,11 @@ class BodyEtarEnApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: size.width * 0.3,
+                      width: size.width * 0.25,
                       child: Text(
                         'Érintésvédelem',
                         style: TextStyle(
-                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontSize: 30,
                           fontWeight: FontWeight.w600,
                           color: Colors.blue.shade200,
                         ),
@@ -378,15 +368,15 @@ class BodyEtarEnApp extends StatelessWidget {
                     ),
                     InkWell(
                       child: Container(
-                        width: size.width * 0.30,
+                        width: size.width * 0.50,
                         child: Card(
                           color: Color(0xff3095C3),
                           child: Padding(
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.all(14),
                             child: Text(
                               'Érintésvédelmi, villámvédelmi, károsanyag-kibocsátási mérések '
                               'jegyzőkönyvei és azok megállapításai kerülnek rögzítésre. ',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                             ),
                           ),
                         ),
@@ -407,11 +397,11 @@ class BodyEtarEnApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: size.width * 0.3,
+                      width: size.width * 0.25,
                       child: Text(
                         'Időszakos vizsgálatok',
                         style: TextStyle(
-                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontSize: 30,
                           fontWeight: FontWeight.w600,
                           color: Colors.blue.shade200,
                         ),
@@ -424,15 +414,15 @@ class BodyEtarEnApp extends StatelessWidget {
                     ),
                     InkWell(
                       child: Container(
-                        width: size.width * 0.30,
+                        width: size.width * 0.50,
                         child: Card(
                           color: Color(0xff3095C3),
                           child: Padding(
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.all(14),
                             child: Text(
                               'A vizsgálat megnevezése, a jegyzőkönyv azonosítója, '
                                   'kelte, megállapítása, készítője és jogosultsága kerül rögzítésre. ',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                             ),
                           ),
                         ),
@@ -453,11 +443,11 @@ class BodyEtarEnApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: size.width * 0.3,
+                      width: size.width * 0.25,
                       child: Text(
                         'Terhelési próba',
                         style: TextStyle(
-                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontSize: 30,
                           fontWeight: FontWeight.w600,
                           color: Colors.blue.shade200,
                         ),
@@ -470,16 +460,16 @@ class BodyEtarEnApp extends StatelessWidget {
                     ),
                     InkWell(
                       child: Container(
-                        width: size.width * 0.30,
+                        width: size.width * 0.50,
                         child: Card(
                           color: Color(0xff3095C3),
                           child: Padding(
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.all(14),
                             child: Text(
                               'A terhelési próba jellege (üzemi terheléses vizsgálat, '
                                   'működőképesség vizsgálat) és adatai, a jegyzőkönyv azonosítója, '
                                   'kelte, megállapítása, készítője és jogosultsága kerül rögzítésre. ',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                             ),
                           ),
                         ),
@@ -500,11 +490,11 @@ class BodyEtarEnApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: size.width * 0.3,
+                      width: size.width * 0.25,
                       child: Text(
                         'Egyenértékű biztonság igazolása',
                         style: TextStyle(
-                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontSize: 30,
                           fontWeight: FontWeight.w600,
                           color: Colors.blue.shade200,
                         ),
@@ -517,15 +507,15 @@ class BodyEtarEnApp extends StatelessWidget {
                     ),
                     InkWell(
                       child: Container(
-                        width: size.width * 0.30,
+                        width: size.width * 0.50,
                         child: Card(
                           color: Color(0xff3095C3),
                           child: Padding(
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.all(14),
                             child: Text(
                               'Az emelőgépre vonatkozó szabványtól való eltérés alkalmazása '
                                   'esetén az egyenértékű biztonság igazolásának adatai.',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                             ),
                           ),
                         ),
@@ -546,11 +536,11 @@ class BodyEtarEnApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: size.width * 0.3,
+                      width: size.width * 0.25,
                       child: Text(
                         'Műszakos vizsgálatok',
                         style: TextStyle(
-                          fontSize: size.width > 1025 ? 35 : 25,
+                          fontSize: 30,
                           fontWeight: FontWeight.w600,
                           color: Colors.blue.shade200,
                         ),
@@ -563,11 +553,11 @@ class BodyEtarEnApp extends StatelessWidget {
                     ),
                     InkWell(
                       child: Container(
-                        width: size.width * 0.30,
+                        width: size.width * 0.50,
                         child: Card(
                           color: Color(0xff3095C3),
                           child: Padding(
-                            padding: EdgeInsets.all(12),
+                            padding: EdgeInsets.all(14),
                             child: Text(
                               'Az emelőgépnaplót a gépkezelő naprakészen vezeti: '
                                   'Beírás: „műszakos vizsgálatot elvégeztem a berendezés üzemképes.” '
@@ -577,7 +567,7 @@ class BodyEtarEnApp extends StatelessWidget {
                                   'A berendezést szakszerelővel meg kell javíttatni. '
                                   'A javítás tényét az emelőgép naplóban rögzíteni kell. '
                                   'A berendezést csak ezután szabad újra üzemeltetni. ',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                             ),
                           ),
                         ),

@@ -90,18 +90,20 @@ class EnBodyMobile extends StatelessWidget {
                     "\nés a bejegyzésre jogosultak körének szabályozását.",
                   style: TextStyle(
                       fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      foreground: Paint()..shader = iphoneShader,
-                      shadows: [
-                        Shadow(
-                            offset: Offset(10, 10),
-                            blurRadius: 20,
-                            color: Colors.black),
-                        Shadow(
-                            offset: Offset(10, 10),
-                            blurRadius: 20,
-                            color: Colors.black12),
-                      ]),
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white70,
+                      // foreground: Paint()..shader = iphoneShader,
+                      // shadows: [
+                      //   Shadow(
+                      //       offset: Offset(10, 10),
+                      //       blurRadius: 20,
+                      //       color: Colors.black),
+                      //   Shadow(
+                      //       offset: Offset(10, 10),
+                      //       blurRadius: 20,
+                      //       color: Colors.black12),
+                      // ],
+                  ),
                 ),
               ),
               SizedBox(
